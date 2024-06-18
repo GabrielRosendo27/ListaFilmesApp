@@ -4,7 +4,11 @@ import Title from "../Components/Title";
 import SavedMovies from "../Components/SavedMovies";
 import { firestore, collection, getDocs, addDoc } from "./firebaseConfig";
 import removeMovie from "../src/removeMovie";
+import styled from "styled-components";
 
+const ContainerAll = styled.div`
+  background: #c7c7c7;
+`;
 const App = () => {
   const [savedMovies, setSavedMovies] = React.useState([]);
 
@@ -30,11 +34,11 @@ const App = () => {
   };
 
   return (
-    <>
+    <ContainerAll>
       <Title />
       <MovieSearch onMovieSave={handleMovieSave} />
       <SavedMovies savedMovies={savedMovies} onRemove={handleMovieRemove} />
-    </>
+    </ContainerAll>
   );
 };
 

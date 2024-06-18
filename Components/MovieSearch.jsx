@@ -1,6 +1,14 @@
 import React from "react";
 import tmdbApi from "../api/tmdbApi";
 import omdbApi from "../api/omdbApi";
+import styled from "styled-components";
+
+const InputSearch = styled.input`
+  background-color: gray;
+  padding: 5px;
+  margin-right: 5px;
+`;
+
 const MovieSearch = ({ onMovieSave }) => {
   const [inputValue, setInputValue] = React.useState("");
   const [movieData, setMovieData] = React.useState(null);
@@ -22,10 +30,11 @@ const MovieSearch = ({ onMovieSave }) => {
       setMovieData(null);
     }
   };
+
   return (
     <>
       <div>
-        <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Digite o nome do Filme" />
+        <InputSearch type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Digite o nome do Filme"></InputSearch>
         <button onClick={handleSearch}>Buscar</button>
         {error && <p style={{ color: "red" }}>{error}</p>}
         {movieData && (
