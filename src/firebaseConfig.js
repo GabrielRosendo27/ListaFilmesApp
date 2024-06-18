@@ -4,7 +4,7 @@ import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "444",
+  apiKey: "AIzaSyCvb9xPkZR2Vu3PRKbYNKtx3dMNUYHn1qQ",
   authDomain: "listafilmesapp.firebaseapp.com",
   projectId: "listafilmesapp",
   storageBucket: "listafilmesapp.appspot.com",
