@@ -1,10 +1,10 @@
 // src/firebaseConfig.js
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
+import { getFirestore, collection, getDocs, addDoc, deleteDoc, doc } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCvb9xPkZR2Vu3PRKbYNKtx3dMNUYHn1qQ",
+  apiKey: "444",
   authDomain: "listafilmesapp.firebaseapp.com",
   projectId: "listafilmesapp",
   storageBucket: "listafilmesapp.appspot.com",
@@ -16,4 +16,4 @@ const firebaseApp = initializeApp(firebaseConfig);
 const firestore = getFirestore(firebaseApp);
 const storage = getStorage(firebaseApp);
 
-export { firestore, storage, collection, getDocs, addDoc };
+export { firestore, storage, collection, getDocs, addDoc, deleteDoc, doc };
