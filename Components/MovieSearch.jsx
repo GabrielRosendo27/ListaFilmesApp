@@ -2,11 +2,26 @@ import React from "react";
 import tmdbApi from "../api/tmdbApi";
 import omdbApi from "../api/omdbApi";
 import styled from "styled-components";
+import PathSvgInput from "../assets/PathSvgInput";
 
 const InputSearch = styled.input`
-  background-color: gray;
-  padding: 5px;
-  margin-right: 5px;
+  width: 195px;
+  padding: 10px 0px 10px 40px;
+  border-radius: 9999px;
+  border: solid 1px #333;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  opacity: 0.8;
+  &:focus {
+    opacity: 1;
+    width: 250px;
+  }
+`;
+const Svg = styled.svg`
+  position: absolute;
+  top: 6%;
+  left: 10px;
+  transform: translate(0, -50%);
 `;
 
 const MovieSearch = ({ onMovieSave }) => {
@@ -35,6 +50,9 @@ const MovieSearch = ({ onMovieSave }) => {
     <>
       <div>
         <InputSearch type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Digite o nome do Filme"></InputSearch>
+        <Svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+          <path d={PathSvgInput} fillRule="evenodd"></path>
+        </Svg>
         <button onClick={handleSearch}>Buscar</button>
         {error && <p style={{ color: "red" }}>{error}</p>}
         {movieData && (
