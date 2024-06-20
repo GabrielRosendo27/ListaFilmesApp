@@ -7,7 +7,10 @@ import removeMovie from "../src/removeMovie";
 import styled from "styled-components";
 
 const ContainerAll = styled.div`
-  background: #c7c7c7;
+  width: 95vw;
+  padding: 10px;
+  margin: 0 auto;
+  height: 100vh;
 `;
 const App = () => {
   const [savedMovies, setSavedMovies] = React.useState([]);

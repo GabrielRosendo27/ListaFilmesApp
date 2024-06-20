@@ -5,7 +5,6 @@ const SavedMovies = ({ savedMovies, onRemove }) => {
 
   return (
     <div>
-      <h3>-- Filmes Salvos -- </h3>
       {savedMovies.map((movie, index) => (
         <div key={index}>
           <h2>{movie.title}</h2>

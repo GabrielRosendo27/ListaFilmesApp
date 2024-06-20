@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const InputButtonContainerStyle = styled.div`
-  background: green;
   display: flex;
+  gap: 15px;
   padding: 10px;
 `;

@@ -6,7 +6,7 @@ export const InputContainerStyle = styled.div`
   align-items: center;
 `;
 export const InputComponentStyle = styled.input`
-  width: 200px;
+  width: 900px;
   padding: 10px 0px 10px 40px;
   border-radius: 9999px;
   border: solid 1px #333;
@@ -15,6 +15,6 @@ export const InputComponentStyle = styled.input`
   opacity: 0.8;
   &:focus {
     opacity: 1;
-    width: 250px;
+    width: 950px;
   }
 `;
