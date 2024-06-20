@@ -2,6 +2,7 @@ import React from "react";
 
 const SavedMovies = ({ savedMovies, onRemove }) => {
   const NA = "N/A";
+
   return (
     <div>
       <h3>-- Filmes Salvos -- </h3>
