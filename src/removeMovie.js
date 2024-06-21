@@ -1,4 +1,3 @@
-// src/utils/removeMovie.js
 import { firestore, doc, deleteDoc } from "../src/firebaseConfig";
 
 const removeMovie = async (movieId) => {

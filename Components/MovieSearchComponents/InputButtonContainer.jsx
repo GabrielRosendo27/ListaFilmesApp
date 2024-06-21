@@ -3,18 +3,18 @@ import { InputButtonContainerStyle } from "./InputButtonContainer.style";
 import InputComponent from "../MovieSearchComponents/InputComponent";
 import ButtonComponent from "./ButtonComponent";
 
-const InputButtonContainer = ({ inputValue, setInputValue, setMovieData, error, setError, movieData, onMovieSave }) => {
+const InputButtonContainer = ({ inputValue, setInputValue, setMovieData, error, setError, movieData, onMovieSave, setLoading }) => {
   return (
     <InputButtonContainerStyle>
       <InputComponent inputValue={inputValue} setInputValue={setInputValue} />
       <ButtonComponent
         inputValue={inputValue}
-        setInputValue={setInputValue}
         setMovieData={setMovieData}
         error={error}
         setError={setError}
         movieData={movieData}
         onMovieSave={onMovieSave}
+        setLoading={setLoading}
       />
     </InputButtonContainerStyle>
   );

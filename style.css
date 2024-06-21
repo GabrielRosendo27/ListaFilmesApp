@@ -5,10 +5,24 @@
   font-family: "Open Sans", sans-serif;
 }
 body {
-  background: #7c7c7c;
+  background: linear-gradient(100deg, #39376d, #29284e);
 }
 img {
   max-width: 100%;
   width: 10vw;
   cursor: pointer;
+}
+/*  */
+.btn:hover > .icon {
+  transform: scale(1.5);
+}
+
+.btn:hover > .icon path {
+  fill: rgb(168, 7, 7);
+}
+
+.btn:hover::after {
+  visibility: visible;
+  opacity: 1;
+  top: -160%;
 }

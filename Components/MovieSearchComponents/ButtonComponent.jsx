@@ -3,19 +3,21 @@ import tmdbApi from "../../api/tmdbApi";
 import omdbApi from "../../api/omdbApi";
 import { ButtonComponentStyle } from "../MovieSearchComponents/ButtonComponent.style";
 
-const ButtonComponent = ({ inputValue, setMovieData, error, setError, onMovieSave }) => {
+const ButtonComponent = ({ inputValue, setMovieData, error, setError, onMovieSave, setLoading }) => {
   const handleSearch = async () => {
     const tmdbApiKey = "88740fcede037c6631f0d94c508f0454";
     const omdbApiKey = "3d49971e";
     try {
+      setLoading(true);
       const { title, originalTitle, overview, posterPath } = await tmdbApi(inputValue, tmdbApiKey);
       const movieDetails = await omdbApi(originalTitle, omdbApiKey);
       const movieData = { ...movieDetails, overview, posterPath, title };
       setMovieData(movieData);
       setError(null);
-
       await onMovieSave(movieData);
+      setLoading(false);
     } catch (err) {
+      setLoading(false);
       setError(err.message);
       setMovieData(null);
     }
