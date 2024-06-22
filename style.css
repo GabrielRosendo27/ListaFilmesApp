@@ -5,7 +5,9 @@
   font-family: "Open Sans", sans-serif;
 }
 body {
-  background: linear-gradient(100deg, #39376d, #29284e);
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #2d3150, #1c1b34);
 }
 img {
   max-width: 100%;
