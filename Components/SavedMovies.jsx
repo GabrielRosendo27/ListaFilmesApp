@@ -2,6 +2,8 @@ import React from "react";
 import TrashIcon from "./MovieSavedComponents/TrashIcon";
 import { CardsContainer, Card, MovieImage, InfoContainer, Title, Details, RatingContainer, Rating, TrashDiv } from "../Components/MovieSavedComponents/SavedMovies.style";
 import ClockSvg from "../assets/ClockSvg";
+import ImgSvg from "../assets/ImgSvg";
+import ImgSvgCountry from "../assets/ImgSvgCountry";
 
 const SavedMovies = ({ savedMovies, onRemove }) => {
   const NA = "N/A";
@@ -11,19 +13,36 @@ const SavedMovies = ({ savedMovies, onRemove }) => {
         <Card key={index}>
           <div>{movie.posterPath && <MovieImage src={`https://image.tmdb.org/t/p/w500${movie.posterPath}`} alt={`${movie.title} Poster`} />}</div>
           <InfoContainer>
+            {/* titulo */}
             <Title>{movie.title}</Title>
+            {/* ano */}
             {movie.Year !== NA && <Details>{movie.Year}</Details>}
+            {/* duração */}
             {movie.Runtime !== NA && (
               <Details>
                 <ClockSvg />
                 {movie.Runtime}
               </Details>
             )}
-            {movie.Genre !== NA && <Details>{movie.Genre}</Details>}
+            {/* gênero */}
 
+            {movie.Genre !== NA && (
+              <Details>
+                <ImgSvg />
+                {movie.Genre}
+              </Details>
+            )}
+            {/* sinopse */}
             {/* {<Details>Sinopse: {movie.overview}</Details>} */}
-            {movie.Country !== NA && <Details>{movie.Country.split(", ").slice(0, 2).join(", ")}</Details>}
+            {/* país */}
+            {movie.Country !== NA && (
+              <Details>
+                <ImgSvgCountry />
+                {movie.Country.split(", ").slice(0, 2).join(", ")}
+              </Details>
+            )}
           </InfoContainer>
+          {/* rating */}
           <RatingContainer>
             <span role="img" aria-label="star">
               ⭐
@@ -31,6 +50,7 @@ const SavedMovies = ({ savedMovies, onRemove }) => {
             {movie.imdbRating !== NA && <Rating> {movie.imdbRating}/10</Rating>}
             {movie.Ratings[1] && <Rating>RT: {movie.Ratings[1].Value}</Rating>}
           </RatingContainer>
+          {/* icone lixeira */}
           <TrashDiv>
             <TrashIcon onClick={() => onRemove(movie.id)} />
           </TrashDiv>
