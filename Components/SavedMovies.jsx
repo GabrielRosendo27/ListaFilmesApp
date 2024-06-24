@@ -11,7 +11,7 @@ const SavedMovies = ({ savedMovies, onRemove }) => {
     <CardsContainer>
       {savedMovies.map((movie, index) => (
         <Card key={index}>
-          <div>{movie.posterPath && <MovieImage src={`https://image.tmdb.org/t/p/w500${movie.posterPath}`} alt={`${movie.title} Poster`} />}</div>
+          {movie.posterPath && <MovieImage src={`https://image.tmdb.org/t/p/w500${movie.posterPath}`} alt={`${movie.title} Poster`} />}
           <InfoContainer>
             {/* titulo */}
             <Title>{movie.title}</Title>
@@ -44,11 +44,19 @@ const SavedMovies = ({ savedMovies, onRemove }) => {
           </InfoContainer>
           {/* rating */}
           <RatingContainer>
-            <span role="img" aria-label="star">
-              ⭐
-            </span>
-            {movie.imdbRating !== NA && <Rating> {movie.imdbRating}/10</Rating>}
-            {movie.Ratings[1] && <Rating>RT: {movie.Ratings[1].Value}</Rating>}
+            {movie.imdbRating !== NA && (
+              <Rating>
+                {" "}
+                <span role="img" aria-label="star">
+                  ⭐{movie.imdbRating}
+                </span>
+              </Rating>
+            )}
+            {movie.Ratings[1] && (
+              <Rating>
+                <img src="../img/tomatosvg.svg" width="18" /> {movie.Ratings[1].Value}
+              </Rating>
+            )}
           </RatingContainer>
           {/* icone lixeira */}
           <TrashDiv>
