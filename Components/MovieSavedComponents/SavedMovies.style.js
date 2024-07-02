@@ -6,7 +6,7 @@ const CardsContainer = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   margin: 50px auto 0 auto;
-  background: linear-gradient(135deg, #2d3150, #1c1b34);
+
   /* Media query for screens smaller than 1024px */
   @media (max-width: 1600px) {
     grid-template-columns: 1fr 1fr;

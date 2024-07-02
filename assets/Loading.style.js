@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const LoadingStyle = styled.div`
-  width: 56px;
-  height: 56px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background: conic-gradient(#0000 10%, #474bff);
   mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
