@@ -1,12 +1,13 @@
 import React from "react";
 import InputButtonContainer from "./MovieSearchComponents/InputButtonContainer";
+import MovieSearchContainer from "./MovieSearchComponents/MovieSearchContainer";
+import Error from "./MovieSearchComponents/Error";
 
 const MovieSearch = ({ onMovieSave }) => {
   const [inputValue, setInputValue] = React.useState("");
   const [movieData, setMovieData] = React.useState(null);
   const [error, setError] = React.useState(null);
   const [showMovieData, setShowMovieData] = React.useState(false);
-
   React.useEffect(() => {
     if (movieData) {
       setShowMovieData(true);
@@ -28,21 +29,10 @@ const MovieSearch = ({ onMovieSave }) => {
         movieData={movieData}
         onMovieSave={onMovieSave}
       />
-
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      {showMovieData && movieData && (
-        <div>
-          <h2>{movieData.title} - Adicionado!</h2>
-          {movieData.posterPath && <img src={`https://image.tmdb.org/t/p/w500${movieData.posterPath}`} alt={`${movieData.Title} Poster`} />}
-        </div>
-      )}
-      {/* {movieData && (
-        <div>
-          <h2>{movieData.title} - Adicionado!</h2>
-          {movieData.posterPath && <img src={`https://image.tmdb.org/t/p/w500${movieData.posterPath}`} alt={`${movieData.Title} Poster`} />}
-        </div>
-      )} */}
+      <Error error={error} />
+      {showMovieData && movieData && <MovieSearchContainer movieData={movieData} />}
     </div>
   );
 };
+
 export default MovieSearch;
