@@ -1,5 +1,5 @@
 const omdbApi = async (originalTitle, apiKey) => {
-  const omdbUrl = `http://www.omdbapi.com/?t=${originalTitle}&apikey=${apiKey}`;
+  const omdbUrl = `https://www.omdbapi.com/?t=${originalTitle}&apikey=${apiKey}`;
 
   try {
     const resp = await fetch(omdbUrl);
