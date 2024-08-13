@@ -8,7 +8,7 @@ const ImgSvgStyle = styled.img`
 `;
 
 const ImgSvg = () => {
-  return <ImgSvgStyle src="../img/movierecorder.svg"></ImgSvgStyle>;
+  return <ImgSvgStyle src="/movierecorder.svg"></ImgSvgStyle>;
 };
 
 export default ImgSvg;

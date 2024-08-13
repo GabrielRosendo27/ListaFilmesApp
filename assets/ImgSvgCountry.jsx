@@ -8,7 +8,7 @@ const ImgSvgCountryStyle = styled.img`
 `;
 
 const ImgSvgCountry = () => {
-  return <ImgSvgCountryStyle src="../img/countryflag.svg"></ImgSvgCountryStyle>;
+  return <ImgSvgCountryStyle src="/countryflag.svg"></ImgSvgCountryStyle>;
 };
 
 export default ImgSvgCountry;

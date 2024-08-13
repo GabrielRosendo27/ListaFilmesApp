@@ -54,7 +54,7 @@ const SavedMovies = ({ savedMovies, onRemove }) => {
             )}
             {movie.Ratings[1] && (
               <Rating>
-                <img src="../img/tomatosvg.svg" width="18" /> {movie.Ratings[1].Value}
+                <img src="/tomatosvg.svg" width="18" /> {movie.Ratings[1].Value}
               </Rating>
             )}
           </RatingContainer>
