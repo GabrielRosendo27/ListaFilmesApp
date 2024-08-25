@@ -6,7 +6,7 @@ export const InputContainerStyle = styled.div`
   align-items: center;
 `;
 export const InputComponentStyle = styled.input`
-  width: 500px;
+  width: 40vw;
   padding: 10px 0px 10px 40px;
   border-radius: 9999px;
   border: solid 1px #333;
@@ -21,5 +21,20 @@ export const InputComponentStyle = styled.input`
   }
   &::placeholder {
     color: black;
+  }
+  @media (max-width: 960px) {
+    width: 70vw;
+  }
+  @media (max-width: 540px) {
+    width: 65vw;
+  }
+  @media (max-width: 540px) {
+    width: 58vw;
+  }
+  @media (max-width: 368px) {
+    width: 55vw;
+    &::placeholder {
+      font-size: 12px;
+    }
   }
 `;

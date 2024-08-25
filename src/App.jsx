@@ -8,9 +8,9 @@ import styled from "styled-components";
 
 const ContainerAll = styled.div`
   width: 95vw;
+  height: 100vh;
   padding: 10px;
   margin: 0 auto;
-  height: 100vh;
 `;
 const App = () => {
   const [savedMovies, setSavedMovies] = React.useState([]);

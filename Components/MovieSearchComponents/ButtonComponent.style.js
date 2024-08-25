@@ -12,4 +12,8 @@ export const ButtonComponentStyle = styled.button`
   &:hover {
     border: 1px solid black;
   }
+  @media (max-width: 368px) {
+    padding: 0.5em 1.4em;
+    font-size: 14px;
+  }
 `;

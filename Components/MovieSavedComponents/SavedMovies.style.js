@@ -7,7 +7,6 @@ const CardsContainer = styled.div`
   gap: 1rem;
   margin: 50px auto 0 auto;
 
-  /* Media query for screens smaller than 1024px */
   @media (max-width: 1600px) {
     grid-template-columns: 1fr 1fr;
   }
@@ -26,6 +25,7 @@ const Card = styled.div`
   border-radius: 8px;
   padding: 1rem;
   color: #ffffff;
+  position: relative;
   @media (max-width: 1600px) {
     width: 45vw;
   }
@@ -50,7 +50,10 @@ const MovieImage = styled.img`
     width: 10vw;
   }
   @media (max-width: 768px) {
-    width: 10vw;
+    width: 11vw;
+  }
+  @media (max-width: 568px) {
+    width: 15vw;
   }
 `;
 
@@ -85,8 +88,12 @@ const Title = styled.h2`
     max-width: 170px;
   }
   @media (max-width: 960px) {
-    max-width: 500px;
+    max-width: 150px;
     font-size: 0.9rem;
+  }
+  @media (max-width: 960px) {
+    max-width: 100px;
+    font-size: 0.7rem;
   }
 `;
 
@@ -94,13 +101,19 @@ const Title = styled.h2`
 const Details = styled.p`
   display: flex;
   align-items: center;
-  font-size: 0.85rem;
+  font-size: 1rem;
   opacity: 0.7;
   @media (max-width: 1150px) {
-    font-size: 0.775rem;
+    font-size: 0.9rem;
   }
   @media (max-width: 960px) {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+  }
+  @media (max-width: 450px) {
+    font-size: 0.7rem;
+  }
+  @media (max-width: 450px) {
+    font-size: 0.655rem;
   }
 `;
 
@@ -111,14 +124,18 @@ const RatingContainer = styled.div`
   width: max-content;
   height: max-content;
   background-color: #4a4a6a;
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 0.5rem;
-  font-size: 1rem;
   & > :nth-child(2) {
     margin-left: 0.5rem;
   }
-  @media (max-width: 768px) {
-    margin-top: 0.5rem;
+  @media (max-width: 450px) {
+    padding: 0.3rem;
+    position: absolute;
+    left: 60vw;
+  }
+  @media (max-width: 368px) {
+    padding: 0.2rem;
   }
 `;
 
@@ -128,6 +145,12 @@ const Rating = styled.span`
   font-size: 0.9rem;
   & > :nth-child(1) {
     margin-right: 0.3rem;
+  }
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+  @media (max-width: 368px) {
+    font-size: 0.6rem;
   }
 `;
 
