@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const Titulo = styled.h1`
-  margin: 10px 0;
   text-align: center;
   font-size: 2.2rem;
   background-color: #3a3a5c;

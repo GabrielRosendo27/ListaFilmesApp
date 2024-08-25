@@ -8,13 +8,14 @@ const MovieSearch = ({ onMovieSave }) => {
   const [movieData, setMovieData] = React.useState(null);
   const [error, setError] = React.useState(null);
   const [showMovieData, setShowMovieData] = React.useState(false);
+
   React.useEffect(() => {
     if (movieData) {
       setShowMovieData(true);
       const timer = setTimeout(() => {
         setShowMovieData(false);
-      }, 2000); // Dura 5 segundos
-
+      }, 3000); // Dura 5 segundos
+      // 2000
       return () => clearTimeout(timer); // Limpa o temporizador se o componente for desmontado
     }
   }, [movieData]);
