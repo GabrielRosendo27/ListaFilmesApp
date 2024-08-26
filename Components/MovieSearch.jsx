@@ -14,8 +14,7 @@ const MovieSearch = ({ onMovieSave }) => {
       setShowMovieData(true);
       const timer = setTimeout(() => {
         setShowMovieData(false);
-      }, 3000); // Dura 5 segundos
-      // 2000
+      }, 2000); // Dura 5 segundos
       return () => clearTimeout(timer); // Limpa o temporizador se o componente for desmontado
     }
   }, [movieData]);

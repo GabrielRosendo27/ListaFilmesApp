@@ -6,9 +6,9 @@ const MovieSearchContainer = ({ movieData }) => {
     <>
       <Overlay />
       <MovieSearchContainerStyle>
-        <MovieTextMovieSearch>{movieData.title}</MovieTextMovieSearch>
+        <MovieTextMovieSearch>↑ {movieData.title} - Adicionado</MovieTextMovieSearch>
 
-        {movieData.posterPath && <ImgSearch src={`https://image.tmdb.org/t/p/w500${movieData.posterPath}`} alt={`${movieData.Title} Poster`}></ImgSearch>}
+        {/* {movieData.posterPath && <ImgSearch src={`https://image.tmdb.org/t/p/w500${movieData.posterPath}`} alt={`${movieData.Title} Poster`}></ImgSearch>} */}
       </MovieSearchContainerStyle>
     </>
   );

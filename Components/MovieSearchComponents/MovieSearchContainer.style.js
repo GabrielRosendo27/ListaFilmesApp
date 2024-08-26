@@ -8,15 +8,13 @@ const fadeInOut = keyframes`
 `;
 export const MovieSearchContainerStyle = styled.div`
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 20px;
+  padding: 16px;
   border-radius: 10px;
   text-align: center;
-  animation: ${fadeInOut} 3s forwards;
+  animation: ${fadeInOut} 2s forwards;
+  border: 2px solid rgba(58, 58, 92, 1);
+  background: rgba(99, 150, 96, 0.7);
 `;
 export const Overlay = styled.div`
   position: fixed;
@@ -28,26 +26,21 @@ export const Overlay = styled.div`
   z-index: 999;
 `;
 export const ImgSearch = styled.img`
-  width: 200px;
+  width: 120px;
   border-radius: 8px;
   margin-top: 10px;
 `;
 
 export const MovieTextMovieSearch = styled.h2`
   color: white;
-  margin-bottom: 10px;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @media (max-width: 575px) {
+    font-size: 12px;
+  }
+  @media (max-width: 368px) {
+    font-size: 9px;
+  }
 `;
-// export const MovieSearchContainerStyle = styled.div`
-//   position: absolute;
-//   top: 20%;
-//   left: 50%;
-//   z-index: 1;
-// `;
-
-// export const ImgSearch = styled.img`
-//   width: 200px;
-//   border-radius: 8px;
-// `;
-// export const MovieTextMovieSearch = styled.h2`
-//   color: white;
-// `;

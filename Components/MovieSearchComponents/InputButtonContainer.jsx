@@ -7,7 +7,15 @@ const InputButtonContainer = ({ inputValue, setInputValue, setMovieData, error, 
   return (
     <InputButtonContainerStyle>
       <InputComponent inputValue={inputValue} setInputValue={setInputValue} />
-      <ButtonComponent inputValue={inputValue} setMovieData={setMovieData} error={error} setError={setError} movieData={movieData} onMovieSave={onMovieSave} />
+      <ButtonComponent
+        inputValue={inputValue}
+        setMovieData={setMovieData}
+        error={error}
+        setError={setError}
+        movieData={movieData}
+        onMovieSave={onMovieSave}
+        setInputValue={setInputValue}
+      />
     </InputButtonContainerStyle>
   );
 };
