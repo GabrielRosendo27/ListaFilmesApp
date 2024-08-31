@@ -39,6 +39,7 @@ const App = () => {
   return (
     <ContainerAll>
       <Title />
+
       <MovieSearch onMovieSave={handleMovieSave} />
       <SavedMovies savedMovies={savedMovies} onRemove={handleMovieRemove} />
     </ContainerAll>
