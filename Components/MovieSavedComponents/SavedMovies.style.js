@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 // Container para os cards
-const CardsContainer = styled.div`
+const CardsContainer1 = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
@@ -160,4 +160,4 @@ const TrashDiv = styled.div`
   align-items: end;
 `;
 
-export { Rating, RatingContainer, Details, Title, InfoContainer, MovieImage, Card, CardsContainer, TrashDiv };
+export { Rating, RatingContainer, Details, Title, InfoContainer, MovieImage, Card, CardsContainer1, TrashDiv };

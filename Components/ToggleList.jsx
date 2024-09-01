@@ -20,10 +20,12 @@ const ToggleListSvg = styled.img`
 //
 
 //
-const ToggleList = () => {
+const ToggleList = ({ toggleContainer }) => {
   const [isRotated, setIsRotated] = React.useState(false);
+
   const toggleClick = () => {
     setIsRotated(!isRotated);
+    toggleContainer();
   };
 
   return (
