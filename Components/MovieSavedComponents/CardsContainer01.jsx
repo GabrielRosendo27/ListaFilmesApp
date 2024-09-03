@@ -5,7 +5,7 @@ import ClockSvg from "../../assets/ClockSvg";
 import ImgSvg from "../../assets/ImgSvg";
 import ImgSvgCountry from "../../assets/ImgSvgCountry";
 
-const CardsContainer01 = ({ savedMovies, onRemove }) => {
+const CardsContainer01 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
   const NA = "N/A";
   return (
     <>
@@ -21,7 +21,7 @@ const CardsContainer01 = ({ savedMovies, onRemove }) => {
               {/* duração */}
               {movie.Runtime !== NA && (
                 <Details>
-                  <ClockSvg />
+                  <ClockSvg isClockSvgVisible={isClockSvgVisible} />
                   {movie.Runtime}
                 </Details>
               )}

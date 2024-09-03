@@ -18,20 +18,35 @@ const CardsContainer1 = styled.div`
 
 // Card individual
 const Card = styled.div`
-  width: 90vw;
+  width: 60vw;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   background-color: #3a3a5c;
   border-radius: 8px;
   padding: 0.5rem;
   color: #ffffff;
   position: relative;
+  margin: 0 auto;
   @media (max-width: 1600px) {
-    width: 90vw;
+    width: 65vw;
   }
-  @media (max-width: 960px) {
-    width: 90vw;
+  @media (max-width: 1368px) {
+    width: 70vw;
+  }
+  @media (max-width: 1368px) {
+    width: 70vw;
+  }
+  @media (max-width: 1150px) {
+    width: 75vw;
+  }
+  @media (max-width: 1030px) {
+    width: 80vw;
+  }
+  @media (max-width: 950px) {
+    width: 85vw;
+  }
+  @media (max-width: 815px) {
+    width: 92vw;
   }
 `;
 
@@ -69,21 +84,30 @@ const InfoContainer = styled.div`
 
   @media (max-width: 1600px) {
     width: 30vw;
+    gap: 2.2rem;
   }
   @media (max-width: 960px) {
     width: 60vw;
+    gap: 2rem;
+  }
+  @media (max-width: 640px) {
+    gap: 1.5rem;
   }
 `;
 
 // Título do filme
 const Title = styled.h2`
   width: 30vw;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-left: 0.6rem;
   @media (max-width: 1150px) {
-    font-size: 0.825rem;
+    font-size: 0.8rem;
+  }
+  @media (max-width: 930px) {
+    font-size: 0.7rem;
   }
 `;
 
@@ -99,11 +123,14 @@ const Details = styled.p`
   @media (max-width: 960px) {
     font-size: 0.8rem;
   }
-  @media (max-width: 450px) {
+  @media (max-width: 720px) {
     font-size: 0.7rem;
   }
-  @media (max-width: 450px) {
-    font-size: 0.655rem;
+  @media (max-width: 590px) {
+    font-size: 0.6rem;
+  }
+  @media (max-width: 420px) {
+    font-size: 0.5rem;
   }
 `;
 
@@ -111,16 +138,24 @@ const Details = styled.p`
 const RatingContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: #4a4a6a;
   border-radius: 6px;
   padding: 0.5rem;
   & > :nth-child(2) {
     margin-left: 0.5rem;
   }
-  @media (max-width: 450px) {
+  @media (max-width: 730px) {
+    padding: 0.4rem;
+    gap: 1rem;
+  }
+  @media (max-width: 590px) {
     padding: 0.3rem;
-    position: absolute;
-    left: 60vw;
+    gap: 0.7rem;
+  }
+  @media (max-width: 450px) {
+    padding: 0.2rem;
+    gap: 0.6rem;
   }
   @media (max-width: 368px) {
     padding: 0.2rem;
@@ -130,12 +165,23 @@ const RatingContainer = styled.div`
 const Rating = styled.span`
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 0.9rem;
+
   & > :nth-child(1) {
     margin-right: 0.3rem;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 730px) {
     font-size: 0.8rem;
+    & > :nth-child(1) {
+      width: 14px;
+    }
+  }
+  @media (max-width: 590px) {
+    font-size: 0.6rem;
+    & > :nth-child(1) {
+      width: 10px;
+    }
   }
   @media (max-width: 368px) {
     font-size: 0.6rem;

@@ -4,8 +4,9 @@ import { CardsContainer1, Card, MovieImage, InfoContainer, Title, Details, Ratin
 import ClockSvg from "../../assets/ClockSvg";
 import ImgSvg from "../../assets/ImgSvg";
 import ImgSvgCountry from "../../assets/ImgSvgCountry";
+import ArrowDown from "../../assets/ArrowDown";
 
-const CardsContainer02 = ({ savedMovies, onRemove }) => {
+const CardsContainer02 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
   const NA = "N/A";
   return (
     <>
@@ -21,7 +22,7 @@ const CardsContainer02 = ({ savedMovies, onRemove }) => {
               {/* duração */}
               {movie.Runtime !== NA && (
                 <Details>
-                  <ClockSvg />
+                  <ClockSvg isClockSvgVisible={isClockSvgVisible} />
                   {movie.Runtime}
                 </Details>
               )}
@@ -62,6 +63,7 @@ const CardsContainer02 = ({ savedMovies, onRemove }) => {
                 <TrashIcon onClick={() => onRemove(movie.id)} />
               </TrashDiv>
             </InfoContainer>
+            <ArrowDown />
             {/* rating */}
           </Card>
         ))}

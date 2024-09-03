@@ -3,11 +3,11 @@ import styled from "styled-components";
 
 const ToggleListContainer = styled.div`
   width: max-content;
-  border-radius: 8px;
   cursor: pointer;
   padding: 5px 5px 0 5px;
-  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, margin-left 0.2s linear;
   transform: rotate(${(props) => (props.$isRotated ? "90deg" : "0deg")});
+  margin-left: ${(props) => (props.$isMargin ? "18vw" : "0")};
 `;
 const ToggleListSvg = styled.img`
   width: 22px;
@@ -20,16 +20,19 @@ const ToggleListSvg = styled.img`
 //
 
 //
-const ToggleList = ({ toggleContainer }) => {
+const ToggleList = ({ toggleContainer, setIsClockSvgVisible }) => {
   const [isRotated, setIsRotated] = React.useState(false);
+  const [isMargin, setIsMargin] = React.useState(false);
 
   const toggleClick = () => {
     setIsRotated(!isRotated);
+    setIsMargin(!isMargin);
+    setIsClockSvgVisible((prev) => !prev);
     toggleContainer();
   };
 
   return (
-    <ToggleListContainer $isRotated={isRotated} onClick={toggleClick}>
+    <ToggleListContainer $isMargin={isMargin} $isRotated={isRotated} onClick={toggleClick}>
       <ToggleListSvg src="togglelistsvg.svg"></ToggleListSvg>
     </ToggleListContainer>
   );
