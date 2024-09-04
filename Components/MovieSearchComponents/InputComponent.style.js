@@ -6,7 +6,7 @@ export const InputContainerStyle = styled.div`
   align-items: center;
 `;
 export const InputComponentStyle = styled.input`
-  width: 40vw;
+  width: 60vw;
   padding: 10px 0px 10px 40px;
   border-radius: 9999px;
   border: solid 1px #333;

@@ -7,7 +7,10 @@ const ToggleListContainer = styled.div`
   padding: 5px 5px 0 5px;
   transition: transform 0.2s linear, margin-left 0.2s linear;
   transform: rotate(${(props) => (props.$isRotated ? "90deg" : "0deg")});
-  margin-left: ${(props) => (props.$isMargin ? "18vw" : "0")};
+  margin-left: ${(props) => (props.$isMargin ? "12vw" : "0")};
+  @media (max-width: 1000px) {
+    margin-left: ${(props) => (props.$isMargin ? "1vw" : "0")};
+  }
 `;
 const ToggleListSvg = styled.img`
   width: 22px;

@@ -10,39 +10,16 @@ const CardsContainer1 = styled.div`
 
 // Card individual
 const Card = styled.div`
-  width: 60vw;
+  width: 70vw;
   display: flex;
   flex-direction: row;
   background-color: #3a3a5c;
   border-radius: 8px;
   padding: 0.5rem;
   color: #ffffff;
-  /* position: relative; */
   margin: 0 auto;
-  @media (max-width: 1600px) {
-    width: 65vw;
-  }
-  @media (max-width: 1368px) {
-    width: 70vw;
-  }
-  @media (max-width: 1368px) {
-    width: 70vw;
-  }
-  @media (max-width: 1150px) {
-    width: 75vw;
-  }
-  @media (max-width: 1030px) {
-    width: 80vw;
-  }
-  @media (max-width: 950px) {
-    width: 85vw;
-  }
-  @media (max-width: 815px) {
-    width: 92vw;
-  }
-  @media (max-width: 590px) {
-    /* flex-direction: column; */
-    width: 70vw;
+  @media (max-width: 1000px) {
+    width: 90vw;
   }
 `;
 
@@ -92,7 +69,7 @@ const InfoContainer = styled.div`
   @media (max-width: 590px) {
     flex-direction: column;
     gap: 0.5rem;
-    align-items: start;
+    align-items: center;
   }
 `;
 
@@ -107,12 +84,13 @@ const Title = styled.h2`
   @media (max-width: 1150px) {
     font-size: 0.8rem;
   }
-  @media (max-width: 930px) {
-    font-size: 0.7rem;
-  }
   @media (max-width: 590px) {
-    font-size: 0.9rem;
-    width: max-content;
+    margin-left: 0;
+    width: 55vw;
+    text-align: center;
+  }
+  @media (max-width: 505px) {
+    width: 60vw;
   }
 `;
 
@@ -182,12 +160,11 @@ const Rating = styled.span`
 const TrashDiv = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
   @media (max-width: 590px) {
-    align-items: end;
+    align-self: end;
     position: relative;
-    left: -190px;
-    margin-right: 0;
+    left: -2%;
   }
 `;
 
