@@ -4,16 +4,8 @@ import styled from "styled-components";
 const CardsContainer1 = styled.div`
   display: flex;
   flex-direction: column;
-  grid-template-columns: 1fr;
   gap: 1rem;
   margin: 0 auto;
-
-  @media (max-width: 1600px) {
-    grid-template-columns: 1fr;
-  }
-  @media (max-width: 960px) {
-    grid-template-columns: 1fr;
-  }
 `;
 
 // Card individual
@@ -25,7 +17,7 @@ const Card = styled.div`
   border-radius: 8px;
   padding: 0.5rem;
   color: #ffffff;
-  position: relative;
+  /* position: relative; */
   margin: 0 auto;
   @media (max-width: 1600px) {
     width: 65vw;
@@ -47,6 +39,10 @@ const Card = styled.div`
   }
   @media (max-width: 815px) {
     width: 92vw;
+  }
+  @media (max-width: 590px) {
+    /* flex-direction: column; */
+    width: 70vw;
   }
 `;
 
@@ -93,6 +89,11 @@ const InfoContainer = styled.div`
   @media (max-width: 640px) {
     gap: 1.5rem;
   }
+  @media (max-width: 590px) {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: start;
+  }
 `;
 
 // Título do filme
@@ -102,12 +103,16 @@ const Title = styled.h2`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-left: 0.6rem;
+  margin-left: 0.4rem;
   @media (max-width: 1150px) {
     font-size: 0.8rem;
   }
   @media (max-width: 930px) {
     font-size: 0.7rem;
+  }
+  @media (max-width: 590px) {
+    font-size: 0.9rem;
+    width: max-content;
   }
 `;
 
@@ -123,14 +128,9 @@ const Details = styled.p`
   @media (max-width: 960px) {
     font-size: 0.8rem;
   }
-  @media (max-width: 720px) {
-    font-size: 0.7rem;
-  }
   @media (max-width: 590px) {
-    font-size: 0.6rem;
-  }
-  @media (max-width: 420px) {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
+    margin-left: 0.4rem;
   }
 `;
 
@@ -150,15 +150,9 @@ const RatingContainer = styled.div`
     gap: 1rem;
   }
   @media (max-width: 590px) {
-    padding: 0.3rem;
-    gap: 0.7rem;
-  }
-  @media (max-width: 450px) {
-    padding: 0.2rem;
-    gap: 0.6rem;
-  }
-  @media (max-width: 368px) {
-    padding: 0.2rem;
+    padding: 0.4rem;
+    gap: 0.9rem;
+    margin-left: 0.4rem;
   }
 `;
 
@@ -178,20 +172,23 @@ const Rating = styled.span`
     }
   }
   @media (max-width: 590px) {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     & > :nth-child(1) {
-      width: 10px;
+      width: 14px;
     }
-  }
-  @media (max-width: 368px) {
-    font-size: 0.6rem;
   }
 `;
 
 const TrashDiv = styled.div`
-  width: max-content;
   display: flex;
   align-items: center;
+  margin-right: 1rem;
+  @media (max-width: 590px) {
+    align-items: end;
+    position: relative;
+    left: -190px;
+    margin-right: 0;
+  }
 `;
 
 export { Rating, RatingContainer, Details, Title, InfoContainer, MovieImage, Card, CardsContainer1, TrashDiv };

@@ -18,16 +18,19 @@ const CardsContainer02 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
               {/* titulo */}
               <Title>{movie.title}</Title>
               {/* ano */}
-              {movie.Year !== NA && <Details>{movie.Year}</Details>}
-              {/* duração */}
-              {movie.Runtime !== NA && (
+              {(movie.Year !== NA) | (movie.Runtime !== NA) && (
                 <Details>
-                  <ClockSvg isClockSvgVisible={isClockSvgVisible} />
+                  {movie.Year} | <ClockSvg isClockSvgVisible={isClockSvgVisible} />
                   {movie.Runtime}
                 </Details>
               )}
+              {/* duração */}
+              {/* {movie.Runtime !== NA && (
+                <Details>
+                  <ClockSvg isClockSvgVisible={isClockSvgVisible} />
+                  {movie.Runtime}
+                </Details> */}
               {/* gênero */}
-
               {/* {movie.Genre !== NA && (
                 <Details>
                   <ImgSvg />
@@ -59,10 +62,10 @@ const CardsContainer02 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
                 )}
               </RatingContainer>
               {/* icone lixeira */}
-              <TrashDiv>
-                <TrashIcon onClick={() => onRemove(movie.id)} />
-              </TrashDiv>
             </InfoContainer>
+            <TrashDiv>
+              <TrashIcon onClick={() => onRemove(movie.id)} />
+            </TrashDiv>
             <ArrowDown />
             {/* rating */}
           </Card>
