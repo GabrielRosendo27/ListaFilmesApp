@@ -18,31 +18,21 @@ const Card = styled.div`
   padding: 0.5rem;
   color: #ffffff;
   margin: 0 auto;
-  @media (max-width: 1000px) {
+  @media (max-width: 1050px) {
     width: 90vw;
   }
 `;
 
 // Imagem do filme
 const MovieImage = styled.img`
-  width: 4vw;
+  width: 15vw;
   object-fit: cover;
   border-radius: 6px;
   box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.75);
-  @media (max-width: 1600px) {
-    width: 6vw;
-  }
-  @media (max-width: 1050px) {
-    width: 12vw;
-  }
-  @media (max-width: 960px) {
-    width: 10vw;
-  }
-  @media (max-width: 768px) {
-    width: 11vw;
-  }
-  @media (max-width: 568px) {
-    width: 15vw;
+  display: none;
+  margin-right: 0.9rem;
+  @media (max-width: 590px) {
+    display: block;
   }
 `;
 
@@ -52,9 +42,7 @@ const InfoContainer = styled.div`
   flex-direction: row;
   flex-grow: 1;
   gap: 2.5rem;
-  flex-wrap: nowrap;
   align-items: center;
-
   @media (max-width: 1600px) {
     width: 30vw;
     gap: 2.2rem;
@@ -70,6 +58,7 @@ const InfoContainer = styled.div`
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -80,7 +69,8 @@ const Title = styled.h2`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-left: 0.4rem;
+  margin-left: 0.3rem;
+
   @media (max-width: 1150px) {
     font-size: 0.8rem;
   }
@@ -97,7 +87,6 @@ const Title = styled.h2`
 // Detalhes do filme
 const Details = styled.p`
   display: flex;
-  align-items: center;
   font-size: 1rem;
   opacity: 0.7;
   @media (max-width: 1150px) {
@@ -160,11 +149,10 @@ const Rating = styled.span`
 const TrashDiv = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 1.5rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
   @media (max-width: 590px) {
     align-self: end;
-    position: relative;
-    left: -2%;
   }
 `;
 

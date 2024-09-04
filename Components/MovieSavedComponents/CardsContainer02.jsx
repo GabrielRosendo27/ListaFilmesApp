@@ -13,7 +13,7 @@ const CardsContainer02 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
       <CardsContainer1>
         {savedMovies.map((movie, index) => (
           <Card key={index}>
-            {/* {movie.posterPath && <MovieImage src={`https://image.tmdb.org/t/p/w500${movie.posterPath}`} alt={`${movie.title} Poster`} />} */}
+            {movie.posterPath && <MovieImage src={`https://image.tmdb.org/t/p/w500${movie.posterPath}`} alt={`${movie.title} Poster`} />}
             <InfoContainer>
               {/* titulo */}
               <Title>{movie.title}</Title>
@@ -24,28 +24,10 @@ const CardsContainer02 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
                   {movie.Runtime}
                 </Details>
               )}
-              {/* duração */}
-              {/* {movie.Runtime !== NA && (
-                <Details>
-                  <ClockSvg isClockSvgVisible={isClockSvgVisible} />
-                  {movie.Runtime}
-                </Details> */}
-              {/* gênero */}
-              {/* {movie.Genre !== NA && (
-                <Details>
-                  <ImgSvg />
-                  {movie.Genre}
-                </Details>
-              )} */}
+
               {/* sinopse */}
               {/* {<Details>Sinopse: {movie.overview}</Details>} */}
-              {/* país */}
-              {/* {movie.Country !== NA && (
-                <Details>
-                  <ImgSvgCountry />
-                  {movie.Country.split(", ").slice(0, 2).join(", ")}
-                </Details>
-              )} */}
+
               <RatingContainer>
                 {movie.imdbRating !== NA && (
                   <Rating>
@@ -61,12 +43,12 @@ const CardsContainer02 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
                   </Rating>
                 )}
               </RatingContainer>
-              {/* icone lixeira */}
+              <ArrowDown />
             </InfoContainer>
+            {/* icone lixeira */}
             <TrashDiv>
               <TrashIcon onClick={() => onRemove(movie.id)} />
             </TrashDiv>
-            <ArrowDown />
             {/* rating */}
           </Card>
         ))}
