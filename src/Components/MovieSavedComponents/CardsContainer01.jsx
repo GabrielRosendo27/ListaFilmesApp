@@ -1,9 +1,12 @@
 import React from "react";
 import TrashIcon from "./TrashIcon";
-import { CardsContainer1, Card, MovieImage, InfoContainer, Title, Details, RatingContainer, Rating, TrashDiv } from "./StyleMovieSaved/SavedMovies.style";
-import ClockSvg from "../../assets/ClockSvg";
+import { CardsContainer1, Card, InfoContainer, Title, Details, RatingContainer, Rating, TrashDiv } from "./StyleMovieSaved/SavedMovies.style";
+import MovieRuntime from "./DataMovie/MovieRuntime";
+import MoviePosterPath from "./DataMovie/MoviePosterPath";
+import MovieTitle from "./DataMovie/MovieTitle";
 import ImgSvg from "../../assets/ImgSvg";
 import ImgSvgCountry from "../../assets/ImgSvgCountry";
+import MovieYear from "./DataMovie/MovieYear";
 
 const CardsContainer01 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
   const NA = "N/A";
@@ -12,19 +15,17 @@ const CardsContainer01 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
       <CardsContainer1>
         {savedMovies.map((movie, index) => (
           <Card key={index}>
-            {movie.posterPath && <MovieImage src={`https://image.tmdb.org/t/p/w500${movie.posterPath}`} alt={`${movie.title} Poster`} />}
+            <MoviePosterPath movie={movie} />
             <InfoContainer>
-              {/* titulo */}
-              <Title>{movie.title}</Title>
-              {/* ano */}
-              {movie.Year !== NA && <Details>{movie.Year}</Details>}
-              {/* duração */}
-              {movie.Runtime !== NA && (
+              <MovieTitle movie={movie} />
+              <MovieYear movie={movie} />
+              <MovieRuntime movie={movie} isClockSvgVisible={isClockSvgVisible} />
+              {/* {movie.Runtime !== NA && (
                 <Details>
                   <ClockSvg isClockSvgVisible={isClockSvgVisible} />
                   {movie.Runtime}
                 </Details>
-              )}
+              )} */}
               {/* gênero */}
 
               {movie.Genre !== NA && (

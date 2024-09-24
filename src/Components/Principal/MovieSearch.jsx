@@ -1,7 +1,7 @@
 import React from "react";
-import InputButtonContainer from "../Components/MovieSearchComponents/InputButtonContainer";
-import MovieSearchContainer from "./MovieSearchComponents/MovieSearchContainer";
-import Error from "./MovieSearchComponents/Error";
+import InputButtonContainer from "../MovieSearchComponents/InputButtonContainer";
+import MovieSearchContainer from "../MovieSearchComponents/MovieSearchContainer";
+import Error from "../MovieSearchComponents/Error";
 
 const MovieSearch = ({ onMovieSave }) => {
   const [inputValue, setInputValue] = React.useState("");

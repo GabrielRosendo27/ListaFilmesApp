@@ -1,7 +1,7 @@
 import React from "react";
-import ToggleList from "./ToggleList";
-import CardsContainer01 from "./MovieSavedComponents/CardsContainer01";
-import CardsContainer02 from "./MovieSavedComponents/CardsContainer02";
+import ToggleList from "../ToggleList/ToggleList";
+import CardsContainer01 from "../MovieSavedComponents/CardsContainer01";
+import CardsContainer02 from "../MovieSavedComponents/CardsContainer02";
 
 const SavedMovies = ({ savedMovies, onRemove }) => {
   const [isClockSvgVisible, setIsClockSvgVisible] = React.useState(true);

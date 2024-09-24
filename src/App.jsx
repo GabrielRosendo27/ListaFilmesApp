@@ -1,6 +1,6 @@
 import React from "react";
-import MovieSearch from "../src/Components/MovieSearch";
-import SavedMovies from "../src/Components/SavedMovies";
+import MovieSearch from "../src/Components/Principal/MovieSearch";
+import SavedMovies from "../src/Components/Principal/SavedMovies";
 import { firestore, collection, getDocs, addDoc } from "./firebaseConfig";
 import removeMovie from "../src/removeMovie";
 import styled from "styled-components";
