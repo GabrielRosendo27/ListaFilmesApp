@@ -21,10 +21,10 @@ const Card = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #3a3a5c;
+  background-color: #3c3d37;
   border-radius: 8px;
   padding: 1rem;
-  color: #ffffff;
+  color: #ecdfcc;
   position: relative;
   @media (max-width: 1600px) {
     width: 45vw;
@@ -123,7 +123,7 @@ const RatingContainer = styled.div`
   align-items: center;
   width: max-content;
   height: max-content;
-  background-color: #4a4a6a;
+  background-color: #0d7377;
   border-radius: 6px;
   padding: 0.5rem;
   & > :nth-child(2) {

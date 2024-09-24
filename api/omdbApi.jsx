@@ -4,7 +4,7 @@ const omdbApi = async (originalTitle, apiKey) => {
   try {
     const resp = await fetch(omdbUrl);
     const data = await resp.json();
-    console.log(data);
+
     if (data.Response === "True") {
       return data;
     } else {

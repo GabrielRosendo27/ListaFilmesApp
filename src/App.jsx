@@ -1,6 +1,5 @@
 import React from "react";
 import MovieSearch from "../Components/MovieSearch";
-import Title from "../Components/Title";
 import SavedMovies from "../Components/SavedMovies";
 import { firestore, collection, getDocs, addDoc } from "./firebaseConfig";
 import removeMovie from "../src/removeMovie";
@@ -38,8 +37,6 @@ const App = () => {
 
   return (
     <ContainerAll>
-      <Title />
-
       <MovieSearch onMovieSave={handleMovieSave} />
       <SavedMovies savedMovies={savedMovies} onRemove={handleMovieRemove} />
     </ContainerAll>
