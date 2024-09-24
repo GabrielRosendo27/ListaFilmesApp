@@ -21,7 +21,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #3c3d37;
+  background-color: #161f3b;
   border-radius: 8px;
   padding: 1rem;
   color: #ecdfcc;
@@ -65,7 +65,7 @@ const InfoContainer = styled.div`
   gap: 0.4rem;
   margin-left: 15px;
   justify-content: center;
-
+  letter-spacing: 1px;
   @media (max-width: 1600px) {
     width: 30vw;
   }
@@ -77,12 +77,13 @@ const InfoContainer = styled.div`
 // Título do filme
 const Title = styled.h2`
   max-width: 220px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: pointer;
   @media (max-width: 1150px) {
-    font-size: 0.825rem;
+    font-size: 0.9rem;
   }
   @media (max-width: 1050px) {
     max-width: 170px;
@@ -123,9 +124,10 @@ const RatingContainer = styled.div`
   align-items: center;
   width: max-content;
   height: max-content;
-  background-color: #0d7377;
+  background-color: #060a16;
   border-radius: 6px;
   padding: 0.5rem;
+  color: #7194f6;
   & > :nth-child(2) {
     margin-left: 0.5rem;
   }
