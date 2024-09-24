@@ -1,7 +1,7 @@
 import React from "react";
 import tmdbApi from "../../api/tmdbApi";
 import omdbApi from "../../api/omdbApi";
-import { ButtonComponentStyle } from "../MovieSearchComponents/ButtonComponent.style";
+import { ButtonComponentStyle } from "./StyleMovieSearch/ButtonComponent.style";
 import Loading from "../../assets/Loading";
 
 const ButtonComponent = ({ setInputValue, inputValue, setMovieData, error, setError, onMovieSave }) => {

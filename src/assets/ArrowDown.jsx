@@ -6,6 +6,7 @@ const ArrowDownContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: rotate(270deg);
 `;
 const ArrowDownSvg = styled.img``;
 

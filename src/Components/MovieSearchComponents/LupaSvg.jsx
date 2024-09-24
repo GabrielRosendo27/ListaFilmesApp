@@ -1,5 +1,5 @@
 import React from "react";
-import { LupaSvgStyle } from "../MovieSearchComponents/LupaSvg.style";
+import { LupaSvgStyle } from "./StyleMovieSearch/LupaSvg.style";
 
 const LupaSvg = () => {
   return (

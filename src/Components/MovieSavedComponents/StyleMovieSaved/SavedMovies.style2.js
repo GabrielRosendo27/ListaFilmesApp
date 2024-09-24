@@ -13,7 +13,7 @@ const Card = styled.div`
   width: 70vw;
   display: flex;
   flex-direction: row;
-  background-color: #3a3a5c;
+  background-color: #161f3b;
   border-radius: 8px;
   padding: 0.5rem;
   color: #ffffff;
@@ -106,7 +106,7 @@ const RatingContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #4a4a6a;
+  background-color: #060a16;
   border-radius: 6px;
   padding: 0.5rem;
   & > :nth-child(2) {

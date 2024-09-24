@@ -1,6 +1,6 @@
 import React from "react";
-import { InputButtonContainerStyle } from "./InputButtonContainer.style";
-import InputComponent from "../MovieSearchComponents/InputComponent";
+import { InputButtonContainerStyle } from "./StyleMovieSearch/InputButtonContainer.style";
+import InputComponent from "./InputComponent";
 import ButtonComponent from "./ButtonComponent";
 
 const InputButtonContainer = ({ inputValue, setInputValue, setMovieData, error, setError, movieData, onMovieSave }) => {

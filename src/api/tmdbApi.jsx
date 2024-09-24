@@ -3,7 +3,6 @@ const tmdbApi = async (movieTitle, apiKey) => {
   try {
     const resp = await fetch(tmdbUrl);
     const data = await resp.json();
-    console.log(data);
     if (data.results.length > 0) {
       const { title, original_title, overview, poster_path } = data.results[0];
       return { title: title, originalTitle: original_title, overview, posterPath: poster_path };

@@ -36,7 +36,7 @@ const ToggleList = ({ toggleContainer, setIsClockSvgVisible }) => {
 
   return (
     <ToggleListContainer $isMargin={isMargin} $isRotated={isRotated} onClick={toggleClick}>
-      <ToggleListSvg src="togglelistsvg.svg"></ToggleListSvg>
+      <ToggleListSvg src="togglelist.svg"></ToggleListSvg>
     </ToggleListContainer>
   );
 };

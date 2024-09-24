@@ -1,6 +1,6 @@
 import React from "react";
-import { TrashButtonStyle, TrashIconStyle } from "../MovieSavedComponents/TrashIcon.style";
-import TrashSvgPath from "../../assets/TrashSvgPath";
+import { TrashButtonStyle, TrashIconStyle } from "./StyleMovieSaved/TrashIcon.style";
+import TrashSvgPath from "../../assets/StyleAssets/TrashSvgPath";
 
 const TrashIcon = ({ onClick }) => {
   return (

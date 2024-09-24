@@ -1,5 +1,5 @@
 import React from "react";
-import { MovieSearchContainerStyle, Overlay, ImgSearch, MovieTextMovieSearch } from "./MovieSearchContainer.style.js";
+import { MovieSearchContainerStyle, Overlay, ImgSearch, MovieTextMovieSearch } from "./StyleMovieSearch/MovieSearchContainer.style";
 
 const MovieSearchContainer = ({ movieData }) => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import TrashIcon from "./TrashIcon";
-import { CardsContainer1, Card, MovieImage, InfoContainer, Title, Details, RatingContainer, Rating, TrashDiv } from "./SavedMovies.style";
+import { CardsContainer1, Card, MovieImage, InfoContainer, Title, Details, RatingContainer, Rating, TrashDiv } from "./StyleMovieSaved/SavedMovies.style";
 import ClockSvg from "../../assets/ClockSvg";
 import ImgSvg from "../../assets/ImgSvg";
 import ImgSvgCountry from "../../assets/ImgSvgCountry";

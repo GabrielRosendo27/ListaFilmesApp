@@ -12,12 +12,11 @@ export const InputComponentStyle = styled.input`
   border: solid 1px #333;
   transition: all 0.2s ease-in-out;
   outline: none;
-  opacity: 0.8;
-  background: lightgray;
+  background: #b2b3b2;
   font-size: 16px;
   color: black;
   &:focus {
-    opacity: 1;
+    background: #d6f6e7;
   }
   &::placeholder {
     color: black;

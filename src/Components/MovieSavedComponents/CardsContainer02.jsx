@@ -1,6 +1,6 @@
 import React from "react";
 import TrashIcon from "./TrashIcon";
-import { CardsContainer1, Card, MovieImage, InfoContainer, Title, Details, RatingContainer, Rating, TrashDiv } from "./SavedMovies.style2";
+import { CardsContainer1, Card, MovieImage, InfoContainer, Title, Details, RatingContainer, Rating, TrashDiv } from "./StyleMovieSaved/SavedMovies.style2";
 import ClockSvg from "../../assets/ClockSvg";
 import ImgSvg from "../../assets/ImgSvg";
 import ImgSvgCountry from "../../assets/ImgSvgCountry";
@@ -8,6 +8,7 @@ import ArrowDown from "../../assets/ArrowDown";
 
 const CardsContainer02 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
   const NA = "N/A";
+
   return (
     <>
       <CardsContainer1>

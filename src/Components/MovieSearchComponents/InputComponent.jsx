@@ -1,5 +1,5 @@
 import React from "react";
-import { InputComponentStyle, InputContainerStyle } from "./InputComponent.style";
+import { InputComponentStyle, InputContainerStyle } from "./StyleMovieSearch/InputComponent.style";
 import LupaSvg from "./LupaSvg";
 
 const InputComponent = ({ inputValue, setInputValue }) => {

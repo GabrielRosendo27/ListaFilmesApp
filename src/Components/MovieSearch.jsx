@@ -1,5 +1,5 @@
 import React from "react";
-import InputButtonContainer from "./MovieSearchComponents/InputButtonContainer";
+import InputButtonContainer from "../Components/MovieSearchComponents/InputButtonContainer";
 import MovieSearchContainer from "./MovieSearchComponents/MovieSearchContainer";
 import Error from "./MovieSearchComponents/Error";
 
