@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { arrowClick } from "../../../assets/ArrowDown";
 // Container para os cards
 const CardsContainer1 = styled.div`
   display: flex;
@@ -8,16 +8,19 @@ const CardsContainer1 = styled.div`
   margin: 0 auto;
 `;
 
+console.log(arrowClick);
 // Card individual
 const Card = styled.div`
   width: 70vw;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
+  transform: rotate(${(props) => (props.$isRotated ? "360deg" : "0deg")});
   background-color: #161f3b;
   border-radius: 8px;
   padding: 0.5rem;
   color: #ffffff;
   margin: 0 auto;
+
   @media (max-width: 1050px) {
     width: 90vw;
   }

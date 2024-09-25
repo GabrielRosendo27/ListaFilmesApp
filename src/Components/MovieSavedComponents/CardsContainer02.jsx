@@ -6,10 +6,9 @@ import MoviePosterPath from "./DataMovie/DataMovieCard2/MoviePosterPath";
 import MovieTitle from "./DataMovie/DataMovieCard2/MovieTitle";
 import MovieYear from "./DataMovie/DataMovieCard2/MovieYear";
 import MovieRating from "./DataMovie/DataMovieCard2/MovieRating";
+import ArrowDown from "../../assets/ArrowDown";
 
 const CardsContainer02 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
-  const NA = "N/A";
-
   return (
     <>
       <CardsContainer1>
@@ -20,6 +19,7 @@ const CardsContainer02 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
               <MovieTitle movie={movie} />
               <MovieYear movie={movie} />
               <MovieRuntime movie={movie} isClockSvgVisible={isClockSvgVisible} />
+              <ArrowDown />
             </InfoContainer>
             <RatingContainer>
               <MovieRating movie={movie} />
