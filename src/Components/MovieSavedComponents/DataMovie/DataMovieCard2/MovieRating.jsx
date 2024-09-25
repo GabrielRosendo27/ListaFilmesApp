@@ -1,5 +1,5 @@
 import React from "react";
-import { Rating } from "../StyleMovieSaved/SavedMovies.style";
+import { Rating } from "../../StyleMovieSaved/SavedMovies.style2";
 
 const MovieRating = ({ movie }) => {
   const NA = "N/A";

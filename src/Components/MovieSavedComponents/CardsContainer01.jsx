@@ -1,15 +1,22 @@
 import React from "react";
 import TrashIcon from "./TrashIcon";
-import { CardsContainer1, Card, InfoContainer, Title, Details, RatingContainer, Rating, TrashDiv } from "./StyleMovieSaved/SavedMovies.style";
+import { CardsContainer1, Card, InfoContainer, RatingContainer, TrashDiv } from "./StyleMovieSaved/SavedMovies.style";
 import MovieRuntime from "./DataMovie/MovieRuntime";
 import MoviePosterPath from "./DataMovie/MoviePosterPath";
 import MovieTitle from "./DataMovie/MovieTitle";
-import ImgSvg from "../../assets/ImgSvg";
-import ImgSvgCountry from "../../assets/ImgSvgCountry";
 import MovieYear from "./DataMovie/MovieYear";
+import MovieGenre from "./DataMovie/MovieGenre";
+import MovieCountry from "./DataMovie/MovieCountry";
+import MovieRating from "./DataMovie/MovieRating";
+
+{
+  /* sinopse */
+}
+{
+  /* {<Details>Sinopse: {movie.overview}</Details>} */
+}
 
 const CardsContainer01 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
-  const NA = "N/A";
   return (
     <>
       <CardsContainer1>
@@ -20,45 +27,11 @@ const CardsContainer01 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
               <MovieTitle movie={movie} />
               <MovieYear movie={movie} />
               <MovieRuntime movie={movie} isClockSvgVisible={isClockSvgVisible} />
-              {/* {movie.Runtime !== NA && (
-                <Details>
-                  <ClockSvg isClockSvgVisible={isClockSvgVisible} />
-                  {movie.Runtime}
-                </Details>
-              )} */}
-              {/* gênero */}
-
-              {movie.Genre !== NA && (
-                <Details>
-                  <ImgSvg />
-                  {movie.Genre}
-                </Details>
-              )}
-              {/* sinopse */}
-              {/* {<Details>Sinopse: {movie.overview}</Details>} */}
-              {/* país */}
-              {movie.Country !== NA && (
-                <Details>
-                  <ImgSvgCountry />
-                  {movie.Country.split(", ").slice(0, 2).join(", ")}
-                </Details>
-              )}
+              <MovieGenre movie={movie} />
+              <MovieCountry movie={movie} />
             </InfoContainer>
-            {/* rating */}
             <RatingContainer>
-              {movie.imdbRating !== NA && (
-                <Rating>
-                  {" "}
-                  <span role="img" aria-label="star">
-                    ⭐{movie.imdbRating}
-                  </span>
-                </Rating>
-              )}
-              {movie.Ratings[1] && (
-                <Rating>
-                  <img src="/tomatosvg.svg" width="18" /> {movie.Ratings[1].Value}
-                </Rating>
-              )}
+              <MovieRating movie={movie} />
             </RatingContainer>
             {/* icone lixeira */}
             <TrashDiv>

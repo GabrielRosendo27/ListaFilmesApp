@@ -1,6 +1,6 @@
 import React from "react";
-import { Details } from "../StyleMovieSaved/SavedMovies.style";
-import ImgSvgCountry from "../../../assets/ImgSvgCountry";
+import { Details } from "../../StyleMovieSaved/SavedMovies.style2";
+import ImgSvgCountry from "../../../../assets/ImgSvgCountry";
 
 const MovieCountry = ({ movie }) => {
   const NA = "N/A";

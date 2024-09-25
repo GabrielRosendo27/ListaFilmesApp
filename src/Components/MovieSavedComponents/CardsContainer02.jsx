@@ -1,10 +1,11 @@
 import React from "react";
 import TrashIcon from "./TrashIcon";
-import { CardsContainer1, Card, MovieImage, InfoContainer, Title, Details, RatingContainer, Rating, TrashDiv } from "./StyleMovieSaved/SavedMovies.style2";
-import ClockSvg from "../../assets/ClockSvg";
-import ImgSvg from "../../assets/ImgSvg";
-import ImgSvgCountry from "../../assets/ImgSvgCountry";
-import ArrowDown from "../../assets/ArrowDown";
+import { CardsContainer1, Card, InfoContainer, RatingContainer, TrashDiv } from "./StyleMovieSaved/SavedMovies.style2";
+import MovieRuntime from "./DataMovie/DataMovieCard2/MovieRuntime";
+import MoviePosterPath from "./DataMovie/DataMovieCard2/MoviePosterPath";
+import MovieTitle from "./DataMovie/DataMovieCard2/MovieTitle";
+import MovieYear from "./DataMovie/DataMovieCard2/MovieYear";
+import MovieRating from "./DataMovie/DataMovieCard2/MovieRating";
 
 const CardsContainer02 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
   const NA = "N/A";
@@ -14,43 +15,18 @@ const CardsContainer02 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
       <CardsContainer1>
         {savedMovies.map((movie, index) => (
           <Card key={index}>
-            {movie.posterPath && <MovieImage src={`https://image.tmdb.org/t/p/w500${movie.posterPath}`} alt={`${movie.title} Poster`} />}
+            <MoviePosterPath movie={movie} />
             <InfoContainer>
-              {/* titulo */}
-              <Title>{movie.title}</Title>
-              {/* ano */}
-              {(movie.Year !== NA) | (movie.Runtime !== NA) && (
-                <Details>
-                  {movie.Year} | <ClockSvg isClockSvgVisible={isClockSvgVisible} />
-                  {movie.Runtime}
-                </Details>
-              )}
-
-              {/* sinopse */}
-              {/* {<Details>Sinopse: {movie.overview}</Details>} */}
-
-              <RatingContainer>
-                {movie.imdbRating !== NA && (
-                  <Rating>
-                    {" "}
-                    <span role="img" aria-label="star">
-                      ⭐{movie.imdbRating}
-                    </span>
-                  </Rating>
-                )}
-                {movie.Ratings[1] && (
-                  <Rating>
-                    <img src="/tomatosvg.svg" width="18" /> {movie.Ratings[1].Value}
-                  </Rating>
-                )}
-              </RatingContainer>
-              <ArrowDown />
+              <MovieTitle movie={movie} />
+              <MovieYear movie={movie} />
+              <MovieRuntime movie={movie} isClockSvgVisible={isClockSvgVisible} />
             </InfoContainer>
-            {/* icone lixeira */}
+            <RatingContainer>
+              <MovieRating movie={movie} />
+            </RatingContainer>
             <TrashDiv>
               <TrashIcon onClick={() => onRemove(movie.id)} />
             </TrashDiv>
-            {/* rating */}
           </Card>
         ))}
       </CardsContainer1>
@@ -59,3 +35,10 @@ const CardsContainer02 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
 };
 
 export default CardsContainer02;
+
+{
+  /* sinopse */
+}
+{
+  /* {<Details>Sinopse: {movie.overview}</Details>} */
+}
