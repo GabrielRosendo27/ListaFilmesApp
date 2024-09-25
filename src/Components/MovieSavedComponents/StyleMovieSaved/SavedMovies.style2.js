@@ -43,9 +43,9 @@ const MovieImage = styled.img`
 const InfoContainer = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
   flex-grow: 1;
   gap: 2.5rem;
-  align-items: center;
   @media (max-width: 1600px) {
     width: 30vw;
     gap: 2.2rem;
@@ -64,16 +64,73 @@ const InfoContainer = styled.div`
     justify-content: center;
   }
 `;
+const InsideInfoContainer = styled.div`
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+`;
+const MovieYearMovieRuntimeDiv = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 150px;
+  gap: 10px;
+  flex-shrink: 1;
+  white-space: nowrap;
 
-// Título do filme
+  @media (max-width: 960px) {
+    font-size: 0.9rem; /* Tamanho menor para telas menores */
+  }
+
+  @media (max-width: 640px) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.7rem;
+  }
+`;
+const MovieTitleContainer = styled.div`
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+`;
+const Tooltip = styled.div`
+  visibility: ${(props) => (props.$isVisible ? "visible" : "hidden")};
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Ajuste para posicionar acima do título */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: ${(props) => (props.$isVisible ? 1 : 0)};
+  transition: opacity 0.3s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Setinha do tooltip apontando para o título */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: orange transparent transparent transparent;
+  }
+`;
 const Title = styled.h2`
-  width: 30vw;
+  max-width: 25vw;
   font-size: 0.9rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-left: 0.3rem;
-
   @media (max-width: 1150px) {
     font-size: 0.8rem;
   }
@@ -167,4 +224,19 @@ const TrashRatingDiv = styled.div`
   gap: 10px;
 `;
 
-export { Rating, Cards, RatingContainer, Details, Title, InfoContainer, MovieImage, CardsContainer1, TrashDiv, TrashRatingDiv };
+export {
+  Rating,
+  Cards,
+  RatingContainer,
+  Details,
+  Title,
+  InfoContainer,
+  MovieImage,
+  CardsContainer1,
+  TrashDiv,
+  TrashRatingDiv,
+  MovieTitleContainer,
+  Tooltip,
+  InsideInfoContainer,
+  MovieYearMovieRuntimeDiv,
+};

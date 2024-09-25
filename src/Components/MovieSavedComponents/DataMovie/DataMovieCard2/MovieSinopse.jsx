@@ -2,7 +2,7 @@ import React from "react";
 import { Details } from "../../StyleMovieSaved/SavedMovies.style2";
 import styled from "styled-components";
 const SinopseDiv = styled.div`
-  animation: anim 0.5s;
+  animation: anim 1s;
 
   @keyframes anim {
     0% {
