@@ -105,7 +105,7 @@ const Details = styled.p`
 
 // Classificação do filme
 const RatingContainer = styled.div`
-  width: ${(props) => (props.$isRotated ? "200px" : "")};
+  width: ${(props) => (props.$isRotated ? "max-content" : "")};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,7 +148,9 @@ const Rating = styled.span`
     }
   }
 `;
-
+const Sinopse = styled.div`
+  /* display: none; */
+`;
 const TrashDiv = styled.div`
   display: flex;
   align-items: center;
@@ -159,4 +161,4 @@ const TrashDiv = styled.div`
   }
 `;
 
-export { Rating, Cards, RatingContainer, Details, Title, InfoContainer, MovieImage, CardsContainer1, TrashDiv };
+export { Rating, Cards, RatingContainer, Details, Title, InfoContainer, MovieImage, CardsContainer1, TrashDiv, Sinopse };
