@@ -6,11 +6,10 @@ const ArrowDownContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.15s linear;
 `;
 const ArrowDownSvg = styled.img`
   transition: transform 0.15s linear;
-  transform: rotate(${(props) => (props.$isRotated ? "360deg" : "270deg")});
+  transform: rotate(${(props) => (props.$isRotated ? "360deg" : "270deg")}) translateX(${(props) => (props.$isRotated ? "10px" : "0px")});
 `;
 
 const ArrowDown = ({ isRotated, setIsRotated }) => {

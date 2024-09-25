@@ -14,6 +14,7 @@ const Cards = styled.div`
   width: 70vw;
   display: flex;
   flex-direction: ${(props) => (props.$isRotated ? "column" : "row")};
+  gap: 10px;
   background-color: #161f3b;
   border-radius: 8px;
   padding: 0.5rem;
@@ -109,6 +110,7 @@ const RatingContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
   background-color: #060a16;
   border-radius: 6px;
   padding: 0.5rem;
@@ -148,12 +150,11 @@ const Rating = styled.span`
     }
   }
 `;
-const Sinopse = styled.div`
-  /* display: none; */
-`;
+
 const TrashDiv = styled.div`
   display: flex;
   align-items: center;
+  justify-content: end;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
   @media (max-width: 590px) {
@@ -161,4 +162,9 @@ const TrashDiv = styled.div`
   }
 `;
 
-export { Rating, Cards, RatingContainer, Details, Title, InfoContainer, MovieImage, CardsContainer1, TrashDiv, Sinopse };
+const TrashRatingDiv = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
+export { Rating, Cards, RatingContainer, Details, Title, InfoContainer, MovieImage, CardsContainer1, TrashDiv, TrashRatingDiv };

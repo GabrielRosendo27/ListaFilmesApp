@@ -1,5 +1,5 @@
 import React from "react";
-import { InfoContainer, RatingContainer, TrashDiv, Cards } from "./StyleMovieSaved/SavedMovies.style2";
+import { InfoContainer, RatingContainer, TrashDiv, Cards, TrashRatingDiv } from "./StyleMovieSaved/SavedMovies.style2";
 import TrashIcon from "./TrashIcon";
 import MovieRuntime from "./DataMovie/DataMovieCard2/MovieRuntime";
 import MoviePosterPath from "../MovieSavedComponents/DataMovie/DataMovieCard2/MoviePosterPath";
@@ -22,12 +22,17 @@ const Card = ({ movie, onRemove, isClockSvgVisible }) => {
           <ArrowDown isRotated={isRotated} setIsRotated={setIsRotated} />
         </InfoContainer>
         {isRotated ? <MovieSinopse movie={movie} /> : ""}
-        <RatingContainer $isRotated={isRotated}>
-          <MovieRating movie={movie} />
-        </RatingContainer>
-        <TrashDiv>
+        <TrashRatingDiv>
+          <RatingContainer $isRotated={isRotated}>
+            <MovieRating movie={movie} />
+          </RatingContainer>
+          <TrashDiv>
+            <TrashIcon onClick={() => onRemove(movie.id)} />
+          </TrashDiv>
+        </TrashRatingDiv>
+        {/* <TrashDiv>
           <TrashIcon onClick={() => onRemove(movie.id)} />
-        </TrashDiv>
+        </TrashDiv> */}
       </Cards>
     </>
   );
