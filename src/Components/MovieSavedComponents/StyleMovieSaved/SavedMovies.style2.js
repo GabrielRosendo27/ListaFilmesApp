@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { arrowClick } from "../../../assets/ArrowDown";
+
 // Container para os cards
 const CardsContainer1 = styled.div`
   display: flex;
@@ -8,13 +8,12 @@ const CardsContainer1 = styled.div`
   margin: 0 auto;
 `;
 
-console.log(arrowClick);
 // Card individual
-const Card = styled.div`
+
+const Cards = styled.div`
   width: 70vw;
   display: flex;
-  /* flex-direction: row; */
-  transform: rotate(${(props) => (props.$isRotated ? "360deg" : "0deg")});
+  flex-direction: ${(props) => (props.$isRotated ? "column" : "row")};
   background-color: #161f3b;
   border-radius: 8px;
   padding: 0.5rem;
@@ -106,6 +105,7 @@ const Details = styled.p`
 
 // Classificação do filme
 const RatingContainer = styled.div`
+  width: ${(props) => (props.$isRotated ? "200px" : "")};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -159,4 +159,4 @@ const TrashDiv = styled.div`
   }
 `;
 
-export { Rating, RatingContainer, Details, Title, InfoContainer, MovieImage, Card, CardsContainer1, TrashDiv };
+export { Rating, Cards, RatingContainer, Details, Title, InfoContainer, MovieImage, CardsContainer1, TrashDiv };
