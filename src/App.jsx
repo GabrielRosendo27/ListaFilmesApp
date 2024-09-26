@@ -6,10 +6,11 @@ import removeMovie from "../src/removeMovie";
 import styled from "styled-components";
 
 const ContainerAll = styled.div`
-  width: 95vw;
+  width: 100vw;
   height: 100vh;
-  padding: 10px;
+  padding: 30px;
   margin: 0 auto;
+  overflow-x: hidden;
 `;
 const App = () => {
   const [savedMovies, setSavedMovies] = React.useState([]);

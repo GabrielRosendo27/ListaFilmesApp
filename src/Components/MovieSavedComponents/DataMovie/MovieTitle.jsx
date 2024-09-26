@@ -1,8 +1,14 @@
 import React from "react";
-import { Title } from "../StyleMovieSaved/SavedMovies.style";
+import { Title, Tooltip, TitleContainer } from "../StyleMovieSaved/SavedMovies.style";
 
 const MovieTitle = ({ movie }) => {
-  return <Title>{movie.title}</Title>;
+  const [isTooltipVisible, setTooltipVisible] = React.useState(false);
+  return (
+    <TitleContainer onMouseEnter={() => setTooltipVisible(true)} onMouseLeave={() => setTooltipVisible(false)}>
+      <Title>{movie.title}</Title>
+      <Tooltip $isVisible={isTooltipVisible}>{movie.title}</Tooltip>
+    </TitleContainer>
+  );
 };
 
 export default MovieTitle;

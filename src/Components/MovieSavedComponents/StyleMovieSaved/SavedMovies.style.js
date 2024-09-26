@@ -21,10 +21,10 @@ const Card = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #161f3b;
+  background-color: #14213d;
   border-radius: 8px;
   padding: 1rem;
-  color: #ecdfcc;
+  color: #e5e5e5;
   position: relative;
   @media (max-width: 1600px) {
     width: 45vw;
@@ -75,29 +75,53 @@ const InfoContainer = styled.div`
 `;
 
 // Título do filme
+const TitleContainer = styled.div`
+  width: 200px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+`;
 const Title = styled.h2`
-  max-width: 220px;
-  font-size: 1rem;
+  font-size: 16px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 500;
+  color: #fca311;
   cursor: pointer;
   @media (max-width: 1150px) {
     font-size: 0.9rem;
   }
-  @media (max-width: 1050px) {
-    max-width: 170px;
-  }
-  @media (max-width: 960px) {
-    max-width: 150px;
-    font-size: 0.9rem;
-  }
-  @media (max-width: 960px) {
-    max-width: 100px;
-    font-size: 0.7rem;
+`;
+const Tooltip = styled.div`
+  visibility: ${(props) => (props.$isVisible ? "visible" : "hidden")};
+  background-color: orange;
+  color: #000000;
+  text-align: center;
+  padding: 5px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Ajuste para posicionar acima do título */
+  left: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: ${(props) => (props.$isVisible ? 1 : 0)};
+  transition: opacity 0.3s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Setinha do tooltip apontando para o título */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #fca311 transparent transparent transparent;
   }
 `;
-
 // Detalhes do filme
 const Details = styled.p`
   display: flex;
@@ -124,12 +148,13 @@ const RatingContainer = styled.div`
   align-items: center;
   width: max-content;
   height: max-content;
-  background-color: #060a16;
+  background-color: #fca311;
   border-radius: 6px;
   padding: 0.5rem;
-  color: #7194f6;
+  color: #14213d;
+  font-weight: 600;
   & > :nth-child(2) {
-    margin-left: 0.5rem;
+    margin-left: 0.2rem;
   }
   @media (max-width: 450px) {
     padding: 0.3rem;
@@ -162,4 +187,4 @@ const TrashDiv = styled.div`
   align-items: end;
 `;
 
-export { Rating, RatingContainer, Details, Title, InfoContainer, MovieImage, Card, CardsContainer1, TrashDiv };
+export { Rating, RatingContainer, Details, Title, InfoContainer, MovieImage, Card, CardsContainer1, TrashDiv, Tooltip, TitleContainer };

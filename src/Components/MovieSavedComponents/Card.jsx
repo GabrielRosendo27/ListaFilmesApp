@@ -1,5 +1,5 @@
 import React from "react";
-import { InsideInfoContainer, InfoContainer, RatingContainer, TrashDiv, Cards, TrashRatingDiv, MovieYearMovieRuntimeDiv } from "./StyleMovieSaved/SavedMovies.style2";
+import { InfoContainer, RatingContainer, TrashDiv, Cards, TrashRatingDiv, MovieYearMovieRuntimeDiv } from "./StyleMovieSaved/SavedMovies.style2";
 import TrashIcon from "./TrashIcon";
 import MovieRuntime from "./DataMovie/DataMovieCard2/MovieRuntime";
 import MoviePosterPath from "../MovieSavedComponents/DataMovie/DataMovieCard2/MoviePosterPath";

@@ -1,19 +1,19 @@
 import styled from "styled-components";
 
 export const ButtonComponentStyle = styled.button`
-  color: #fff;
+  color: #023047;
   padding: 0.6em 1.5em;
   font-size: 16px;
   border-radius: 0.5em;
-  background: #2a478e;
-  border: 1px solid #2a478e;
+  background: #fca311;
+  border: 1px solid #fca311;
   cursor: pointer;
   transition: all 0.3s;
   letter-spacing: 1px;
+  font-weight: 500;
   &:hover {
-    transform: scale(1.06, 1.06);
-    background: #7c39d5;
-    border: 1px solid #7c39d5;
+    transform: scale(1.05, 1.05);
+    font-weight: 600;
   }
   @media (max-width: 368px) {
     padding: 0.5em 1.4em;
