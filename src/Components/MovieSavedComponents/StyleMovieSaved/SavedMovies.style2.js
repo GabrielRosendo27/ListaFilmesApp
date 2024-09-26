@@ -16,11 +16,11 @@ const Cards = styled.div`
   flex-direction: ${(props) => (props.$isRotated ? "column" : "row")};
   gap: 10px;
   background-color: #161f3b;
+  align-items: center;
   border-radius: 8px;
   padding: 0.5rem;
   color: #ffffff;
   margin: 0 auto;
-
   @media (max-width: 1050px) {
     width: 90vw;
   }
@@ -44,8 +44,8 @@ const InfoContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   flex-grow: 1;
-  gap: 2.5rem;
   @media (max-width: 1600px) {
     width: 30vw;
     gap: 2.2rem;
@@ -67,25 +67,25 @@ const InfoContainer = styled.div`
 const InsideInfoContainer = styled.div`
   width: 100%;
   display: flex;
-  gap: 20px;
   align-items: center;
+  justify-content: center;
 `;
 const MovieYearMovieRuntimeDiv = styled.div`
-  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: end;
-  margin-right: 150px;
-  gap: 10px;
-  flex-shrink: 1;
+  justify-content: center;
+  gap: 100px;
+  flex-grow: 1;
   white-space: nowrap;
 
   @media (max-width: 960px) {
     font-size: 0.9rem; /* Tamanho menor para telas menores */
+    gap: 50px;
   }
 
   @media (max-width: 640px) {
     font-size: 0.8rem;
+    gap: 10px;
   }
 
   @media (max-width: 480px) {
@@ -93,6 +93,7 @@ const MovieYearMovieRuntimeDiv = styled.div`
   }
 `;
 const MovieTitleContainer = styled.div`
+  width: 200px;
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -126,7 +127,7 @@ const Tooltip = styled.div`
   }
 `;
 const Title = styled.h2`
-  max-width: 25vw;
+  width: 200px;
   font-size: 0.9rem;
   white-space: nowrap;
   overflow: hidden;

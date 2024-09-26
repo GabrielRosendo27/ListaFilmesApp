@@ -15,15 +15,13 @@ const Card = ({ movie, onRemove, isClockSvgVisible }) => {
     <>
       <Cards $isRotated={isRotated}>
         <MoviePosterPath movie={movie} />
+        <MovieTitle movie={movie} />
         <InfoContainer>
-          <MovieTitle movie={movie} />
-          <InsideInfoContainer>
-            <MovieYearMovieRuntimeDiv>
-              <MovieYear movie={movie} />
-              <MovieRuntime movie={movie} isClockSvgVisible={isClockSvgVisible} />
-            </MovieYearMovieRuntimeDiv>
-            <ArrowDown isRotated={isRotated} setIsRotated={setIsRotated} />
-          </InsideInfoContainer>
+          <MovieYearMovieRuntimeDiv>
+            <MovieYear movie={movie} />
+            <MovieRuntime movie={movie} isClockSvgVisible={isClockSvgVisible} />
+          </MovieYearMovieRuntimeDiv>
+          <ArrowDown isRotated={isRotated} setIsRotated={setIsRotated} />
         </InfoContainer>
         {isRotated ? <MovieSinopse movie={movie} /> : ""}
         <TrashRatingDiv>
@@ -34,9 +32,6 @@ const Card = ({ movie, onRemove, isClockSvgVisible }) => {
             <TrashIcon onClick={() => onRemove(movie.id)} />
           </TrashDiv>
         </TrashRatingDiv>
-        {/* <TrashDiv>
-          <TrashIcon onClick={() => onRemove(movie.id)} />
-        </TrashDiv> */}
       </Cards>
     </>
   );
