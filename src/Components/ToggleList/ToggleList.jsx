@@ -8,6 +8,25 @@ const ToggleListContainer = styled.div`
   transition: transform 0.2s linear, margin-left 0.2s linear;
   transform: rotate(${(props) => (props.$isRotated ? "90deg" : "0deg")});
   margin-left: ${(props) => (props.$isMargin ? "12vw" : "0")};
+  animation: ${(props) => (props.$isRotated ? "fadeOut" : "fadeIn")} 2s ease-in-out;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   @media (max-width: 1050px) {
     margin-left: ${(props) => (props.$isMargin ? "1vw" : "0")};
   }

@@ -9,7 +9,7 @@ import MovieRating from "./DataMovie/DataMovieCard2/MovieRating";
 import ArrowDown from "../../assets/ArrowDown";
 import MovieSinopse from "./DataMovie/DataMovieCard2/MovieSinopse";
 
-const Card = ({ movie, onRemove, isClockSvgVisible }) => {
+const Card = ({ movie, onRemove, isClockSvgVisible, index }) => {
   const [isRotated, setIsRotated] = React.useState(false);
   return (
     <>
@@ -18,8 +18,9 @@ const Card = ({ movie, onRemove, isClockSvgVisible }) => {
         <MovieTitle movie={movie} />
         <InfoContainer>
           <MovieYearMovieRuntimeDiv>
-            <MovieYear movie={movie} />
-            <MovieRuntime movie={movie} isClockSvgVisible={isClockSvgVisible} />
+            <MovieYear movie={movie} index={index} />
+
+            <MovieRuntime movie={movie} isClockSvgVisible={isClockSvgVisible} index={index} />
           </MovieYearMovieRuntimeDiv>
           <ArrowDown isRotated={isRotated} setIsRotated={setIsRotated} />
         </InfoContainer>

@@ -225,6 +225,24 @@ const TrashRatingDiv = styled.div`
   gap: 10px;
 `;
 
+const DescriptionSpan = styled.span`
+  position: absolute;
+  top: -32px;
+  left: -9px;
+  font-size: 12px;
+  padding: 2px 12px;
+  background: orange;
+  color: white;
+  border-top: 3px solid #161f3b;
+  border-left: 4px solid #161f3b;
+  border-right: 4px solid #161f3b;
+  border-bottom: 3px solid #161f3b;
+  border-radius: 24px;
+`;
+const MovieDescDiv = styled.div`
+  position: relative;
+`;
+
 export {
   Rating,
   Cards,
@@ -240,4 +258,6 @@ export {
   Tooltip,
   InsideInfoContainer,
   MovieYearMovieRuntimeDiv,
+  DescriptionSpan,
+  MovieDescDiv,
 };

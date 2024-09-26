@@ -8,7 +8,7 @@ const CardsContainer02 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
     <>
       <CardsContainer1>
         {savedMovies.map((movie, index) => (
-          <Card key={index} movie={movie} onRemove={onRemove} isClockSvgVisible={isClockSvgVisible} />
+          <Card key={index} movie={movie} onRemove={onRemove} isClockSvgVisible={isClockSvgVisible} index={index} />
         ))}
       </CardsContainer1>
     </>
