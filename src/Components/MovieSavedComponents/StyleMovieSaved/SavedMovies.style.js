@@ -6,18 +6,16 @@ const CardsContainer1 = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   margin: 0 auto;
-
   @media (max-width: 1600px) {
     grid-template-columns: 1fr 1fr;
   }
-  @media (max-width: 960px) {
+  @media (max-width: 1080px) {
     grid-template-columns: 1fr;
   }
 `;
-
-// Card individual
 const Card = styled.div`
-  width: 31vw;
+  width: 100%;
+  max-width: 500px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -25,53 +23,33 @@ const Card = styled.div`
   border-radius: 8px;
   padding: 1rem;
   color: #e5e5e5;
-  position: relative;
-  @media (max-width: 1600px) {
-    width: 45vw;
-  }
-  @media (max-width: 960px) {
-    width: 90vw;
+  margin: 0 auto;
+  @media (max-width: 576px) {
+    max-width: 300px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 `;
 
 // Imagem do filme
 const MovieImage = styled.img`
-  width: 4vw;
-  object-fit: cover;
+  width: 100px;
+  height: 100%;
   border-radius: 6px;
   box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.75);
-  @media (max-width: 1600px) {
-    width: 6vw;
-  }
-  @media (max-width: 1050px) {
-    width: 8vw;
-  }
-  @media (max-width: 960px) {
-    width: 10vw;
-  }
-  @media (max-width: 768px) {
-    width: 11vw;
-  }
-  @media (max-width: 568px) {
-    width: 15vw;
+  @media (max-width: 576px) {
+    width: 200px;
   }
 `;
 
 // Container para as informações do filme
 const InfoContainer = styled.div`
-  width: 20vw;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
-  margin-left: 15px;
-  justify-content: center;
+  gap: 0.5rem;
+  margin-left: 12px;
   letter-spacing: 1px;
-  @media (max-width: 1600px) {
-    width: 30vw;
-  }
-  @media (max-width: 960px) {
-    width: 60vw;
-  }
 `;
 
 // Título do filme
@@ -80,6 +58,12 @@ const TitleContainer = styled.div`
   position: relative;
   display: inline-block;
   cursor: pointer;
+  @media (max-width: 1050px) {
+    width: 150px;
+  }
+  @media (max-width: 576px) {
+    width: 250px;
+  }
 `;
 const Title = styled.h2`
   font-size: 16px;
@@ -89,8 +73,8 @@ const Title = styled.h2`
   font-weight: 500;
   color: #fca311;
   cursor: pointer;
-  @media (max-width: 1150px) {
-    font-size: 0.9rem;
+  @media (max-width: 576px) {
+    font-size: 18px;
   }
 `;
 const Tooltip = styled.div`
@@ -128,18 +112,6 @@ const Details = styled.p`
   align-items: center;
   font-size: 1rem;
   opacity: 0.7;
-  @media (max-width: 1150px) {
-    font-size: 0.9rem;
-  }
-  @media (max-width: 960px) {
-    font-size: 0.8rem;
-  }
-  @media (max-width: 450px) {
-    font-size: 0.7rem;
-  }
-  @media (max-width: 450px) {
-    font-size: 0.655rem;
-  }
 `;
 
 // Classificação do filme
@@ -156,13 +128,9 @@ const RatingContainer = styled.div`
   & > :nth-child(2) {
     margin-left: 0.2rem;
   }
-  @media (max-width: 450px) {
-    padding: 0.3rem;
-    position: absolute;
-    left: 60vw;
-  }
-  @media (max-width: 368px) {
-    padding: 0.2rem;
+  @media (max-width: 576px) {
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 `;
 
@@ -185,6 +153,9 @@ const TrashDiv = styled.div`
   width: max-content;
   display: flex;
   align-items: end;
+  @media (max-width: 576px) {
+    align-self: end;
+  }
 `;
 
 export { Rating, RatingContainer, Details, Title, InfoContainer, MovieImage, Card, CardsContainer1, TrashDiv, Tooltip, TitleContainer };

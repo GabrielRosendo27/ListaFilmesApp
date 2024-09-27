@@ -5,11 +5,11 @@
   font-family: "Open Sans", sans-serif;
 }
 body {
-  height: 100vh;
-  width: 100vw;
+  max-width: 100%;
+  height: 100%;
   background: #0a1514;
+  margin: 0 auto;
 }
-
 /*  */
 .btn:hover > .icon {
   transform: scale(1.5);

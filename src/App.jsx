@@ -6,10 +6,11 @@ import removeMovie from "../src/removeMovie";
 import styled from "styled-components";
 
 const ContainerAll = styled.div`
-  width: 100vw;
-  height: 100vh;
-  padding: 30px;
+  max-width: 1600px;
+  height: 100%;
   margin: 0 auto;
+  padding: 33px;
+  background: #0a1514;
   overflow-x: hidden;
 `;
 const App = () => {
