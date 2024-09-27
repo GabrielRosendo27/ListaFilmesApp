@@ -6,6 +6,7 @@ const CardsContainer1 = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   margin: 0 auto;
+  position: relative;
   @media (max-width: 1600px) {
     grid-template-columns: 1fr 1fr;
   }

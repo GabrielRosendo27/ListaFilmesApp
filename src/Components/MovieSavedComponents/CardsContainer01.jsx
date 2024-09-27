@@ -8,14 +8,6 @@ import MovieYear from "./DataMovie/MovieYear";
 import MovieGenre from "./DataMovie/MovieGenre";
 import MovieCountry from "./DataMovie/MovieCountry";
 import MovieRating from "./DataMovie/MovieRating";
-
-{
-  /* sinopse */
-}
-{
-  /* {<Details>Sinopse: {movie.overview}</Details>} */
-}
-
 const CardsContainer01 = ({ savedMovies, onRemove, isClockSvgVisible }) => {
   return (
     <>
