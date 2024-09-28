@@ -4,9 +4,8 @@ import styled from "styled-components";
 const CardsContainer1 = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
+  gap: 0.6rem;
   margin: 0 auto;
-  position: relative;
   @media (max-width: 1600px) {
     grid-template-columns: 1fr 1fr;
   }

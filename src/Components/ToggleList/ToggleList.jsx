@@ -6,8 +6,12 @@ const ToggleListContainer = styled.div`
   cursor: pointer;
   padding: 5px 5px 0 5px;
   transition: transform 0.2s linear;
+  margin: ${(props) => (props.$isRotated ? "5px auto 20px auto" : "")};
   &:hover {
     transform: scale(1.2);
+  }
+  @media (max-width: 1600px) {
+    margin: 5px auto 20px auto;
   }
 `;
 const ToggleListSvg = styled.img`
@@ -15,7 +19,7 @@ const ToggleListSvg = styled.img`
   height: 24px;
   transition: transform 0.2s linear;
   transform: rotate(${(props) => (props.$isRotated ? "0deg" : "90deg")});
-  animation: ${(props) => (props.$isRotated ? "fadeOut" : "fadeIn")} 2s ease-in-out;
+  animation: ${(props) => (props.$isRotated ? "fadeOut" : "fadeIn")} 1s ease-in-out;
   @keyframes fadeIn {
     0% {
       opacity: 0;

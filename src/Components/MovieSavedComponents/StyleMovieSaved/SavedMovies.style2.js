@@ -4,25 +4,27 @@ import styled from "styled-components";
 const CardsContainer1 = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.6rem;
   margin: 0 auto;
 `;
 
 // Card individual
 
 const Cards = styled.div`
-  width: 70vw;
+  max-width: 1300px;
+  width: 100%;
   display: flex;
   flex-direction: ${(props) => (props.$isRotated ? "column" : "row")};
   gap: 10px;
-  background-color: #161f3b;
+  background-color: #14213d;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 0.5rem;
   color: #ffffff;
   margin: 0 auto;
-  @media (max-width: 1050px) {
-    width: 90vw;
+  @media (max-width: 590px) {
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -34,9 +36,6 @@ const MovieImage = styled.img`
   box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.75);
   display: none;
   margin-right: 0.9rem;
-  @media (max-width: 590px) {
-    display: block;
-  }
 `;
 
 // Container para as informações do filme
@@ -46,22 +45,8 @@ const InfoContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-grow: 1;
-  @media (max-width: 1600px) {
-    width: 30vw;
-    gap: 2.2rem;
-  }
-  @media (max-width: 960px) {
-    width: 60vw;
-    gap: 2rem;
-  }
-  @media (max-width: 640px) {
-    gap: 1.5rem;
-  }
   @media (max-width: 590px) {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-    justify-content: center;
+    gap: 20px;
   }
 `;
 const InsideInfoContainer = styled.div`
@@ -74,29 +59,31 @@ const MovieYearMovieRuntimeDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 80px;
   flex-grow: 1;
   white-space: nowrap;
-
-  @media (max-width: 960px) {
-    font-size: 0.9rem; /* Tamanho menor para telas menores */
-    gap: 50px;
+  @media (max-width: 750px) {
+    gap: 20px;
   }
-
-  @media (max-width: 640px) {
-    font-size: 0.8rem;
+  @media (max-width: 590px) {
     gap: 10px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 0.7rem;
   }
 `;
 const MovieTitleContainer = styled.div`
-  width: 200px;
+  width: 150px;
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  flex-grow: 1;
+  border-radius: 24px;
+  padding: 5px;
+  @media (max-width: 590px) {
+    width: 280px;
+    padding: 0;
+    color: #fb8500;
+  }
 `;
 const Tooltip = styled.div`
   visibility: ${(props) => (props.$isVisible ? "visible" : "hidden")};
@@ -127,21 +114,12 @@ const Tooltip = styled.div`
   }
 `;
 const Title = styled.h2`
-  width: 200px;
   font-size: 0.9rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  @media (max-width: 1150px) {
-    font-size: 0.8rem;
-  }
   @media (max-width: 590px) {
-    margin-left: 0;
-    width: 55vw;
-    text-align: center;
-  }
-  @media (max-width: 505px) {
-    width: 60vw;
+    font-size: 1rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 `;
 
@@ -150,16 +128,6 @@ const Details = styled.p`
   display: flex;
   font-size: 1rem;
   opacity: 0.7;
-  @media (max-width: 1150px) {
-    font-size: 0.9rem;
-  }
-  @media (max-width: 960px) {
-    font-size: 0.8rem;
-  }
-  @media (max-width: 590px) {
-    font-size: 0.8rem;
-    margin-left: 0.4rem;
-  }
 `;
 
 // Classificação do filme
@@ -175,15 +143,6 @@ const RatingContainer = styled.div`
   & > :nth-child(2) {
     margin-left: 0.5rem;
   }
-  @media (max-width: 730px) {
-    padding: 0.4rem;
-    gap: 1rem;
-  }
-  @media (max-width: 590px) {
-    padding: 0.4rem;
-    gap: 0.9rem;
-    margin-left: 0.4rem;
-  }
 `;
 
 const Rating = styled.span`
@@ -195,29 +154,12 @@ const Rating = styled.span`
   & > :nth-child(1) {
     margin-right: 0.3rem;
   }
-  @media (max-width: 730px) {
-    font-size: 0.8rem;
-    & > :nth-child(1) {
-      width: 14px;
-    }
-  }
-  @media (max-width: 590px) {
-    font-size: 0.8rem;
-    & > :nth-child(1) {
-      width: 14px;
-    }
-  }
 `;
 
 const TrashDiv = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: end;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
-  @media (max-width: 590px) {
-    align-self: end;
-  }
 `;
 
 const TrashRatingDiv = styled.div`
@@ -228,19 +170,37 @@ const TrashRatingDiv = styled.div`
 const DescriptionSpan = styled.span`
   position: absolute;
   top: -32px;
-  left: -9px;
-  font-size: 12px;
+  left: -11px;
+  font-size: 11px;
+  font-weight: 600;
   padding: 2px 12px;
   background: orange;
-  color: white;
+  color: #fff;
   border-top: 3px solid #161f3b;
   border-left: 4px solid #161f3b;
   border-right: 4px solid #161f3b;
   border-bottom: 3px solid #161f3b;
   border-radius: 24px;
+  @media (max-width: 590px) {
+    display: none;
+  }
 `;
 const MovieDescDiv = styled.div`
   position: relative;
+`;
+const SinopseDiv = styled.div`
+  animation: anim 1s;
+  padding: 10px;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  @keyframes anim {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 export {
@@ -260,4 +220,5 @@ export {
   MovieYearMovieRuntimeDiv,
   DescriptionSpan,
   MovieDescDiv,
+  SinopseDiv,
 };
