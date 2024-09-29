@@ -73,7 +73,7 @@ const MovieTitleContainer = styled.div`
   width: ${(props) => (props.$isRotated ? "400px" : "150px")};
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   cursor: pointer;
   flex-grow: 1;
@@ -82,7 +82,7 @@ const MovieTitleContainer = styled.div`
   @media (max-width: 590px) {
     width: 280px;
     padding: 0;
-    color: #fb8500;
+    justify-content: center;
   }
 `;
 const Tooltip = styled.div`
