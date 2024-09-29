@@ -70,7 +70,7 @@ const MovieYearMovieRuntimeDiv = styled.div`
   }
 `;
 const MovieTitleContainer = styled.div`
-  width: 150px;
+  width: ${(props) => (props.$isRotated ? "400px" : "150px")};
   position: relative;
   display: flex;
   justify-content: center;
@@ -169,8 +169,8 @@ const TrashRatingDiv = styled.div`
 
 const DescriptionSpan = styled.span`
   position: absolute;
-  top: -32px;
-  left: -11px;
+  top: -42px;
+  left: 68px;
   font-size: 11px;
   font-weight: 600;
   padding: 2px 12px;
@@ -181,6 +181,10 @@ const DescriptionSpan = styled.span`
   border-right: 4px solid #161f3b;
   border-bottom: 3px solid #161f3b;
   border-radius: 24px;
+  display: ${(props) => (props.$isRotated ? "none" : "block")};
+  @media (max-width: 750px) {
+    left: 8px;
+  }
   @media (max-width: 590px) {
     display: none;
   }
@@ -190,9 +194,11 @@ const MovieDescDiv = styled.div`
 `;
 const SinopseDiv = styled.div`
   animation: anim 1s;
-  padding: 10px;
+  padding: 5px 5px 0 20px;
   letter-spacing: 1px;
   line-height: 1.8;
+  text-align: left;
+  word-break: keep-all;
   @keyframes anim {
     0% {
       opacity: 0;

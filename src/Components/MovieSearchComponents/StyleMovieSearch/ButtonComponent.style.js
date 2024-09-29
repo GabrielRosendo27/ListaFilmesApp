@@ -15,8 +15,4 @@ export const ButtonComponentStyle = styled.button`
     transform: scale(1.05, 1.05);
     font-weight: 600;
   }
-  @media (max-width: 368px) {
-    padding: 0.5em 1.4em;
-    font-size: 14px;
-  }
 `;

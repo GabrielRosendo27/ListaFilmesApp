@@ -15,12 +15,12 @@ const Card = ({ movie, onRemove, isClockSvgVisible, index }) => {
     <>
       <Cards $isRotated={isRotated}>
         <MoviePosterPath movie={movie} />
-        <MovieTitle movie={movie} />
+        <MovieTitle movie={movie} isRotated={isRotated} />
         <InfoContainer>
           <MovieYearMovieRuntimeDiv>
-            <MovieYear movie={movie} index={index} />
+            <MovieYear movie={movie} index={index} isRotated={isRotated} />
 
-            <MovieRuntime movie={movie} isClockSvgVisible={isClockSvgVisible} index={index} />
+            <MovieRuntime movie={movie} isClockSvgVisible={isClockSvgVisible} index={index} isRotated={isRotated} />
           </MovieYearMovieRuntimeDiv>
           <ArrowDown isRotated={isRotated} setIsRotated={setIsRotated} />
         </InfoContainer>

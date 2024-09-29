@@ -2,7 +2,7 @@ import React from "react";
 import { Details, DescriptionSpan, MovieDescDiv } from "../../StyleMovieSaved/SavedMovies.style2";
 import ClockSvg from "../../../../assets/ClockSvg";
 
-const MovieRuntime = ({ movie, index }) => {
+const MovieRuntime = ({ movie, index, isRotated }) => {
   const NA = "N/A";
   const formatRuntime = (runtime) => {
     // Verifica se runtime é válido e um número
@@ -16,10 +16,10 @@ const MovieRuntime = ({ movie, index }) => {
   };
 
   return (
-    <MovieDescDiv key={index}>
-      {index === 0 && <DescriptionSpan>Duration</DescriptionSpan>}
-      {movie.Runtime !== NA && <Details>{formatRuntime(parseInt(movie.Runtime))}</Details>}
-    </MovieDescDiv>
+    <>
+      <MovieDescDiv key={index}>{index === 0 && <DescriptionSpan $isRotated={isRotated}>Duration</DescriptionSpan>}</MovieDescDiv>
+      <div>{movie.Runtime !== NA && <Details>{formatRuntime(parseInt(movie.Runtime))}</Details>}</div>
+    </>
   );
 };
 

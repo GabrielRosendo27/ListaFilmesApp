@@ -25,9 +25,12 @@ const ButtonComponent = ({ setInputValue, inputValue, setMovieData, error, setEr
       setMovieData(null);
     }
   };
+
   return (
     <div>
-      <ButtonComponentStyle onClick={handleSearch}>{loading ? <Loading /> : "Adicionar"} </ButtonComponentStyle>
+      <ButtonComponentStyle onClick={handleSearch} disabled={loading}>
+        {loading ? <Loading /> : "Adicionar"}{" "}
+      </ButtonComponentStyle>
     </div>
   );
 };
