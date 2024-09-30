@@ -4,6 +4,7 @@ import SavedMovies from "../src/Components/Principal/SavedMovies";
 import { firestore, collection, getDocs, addDoc } from "./firebaseConfig";
 import removeMovie from "../src/removeMovie";
 import styled from "styled-components";
+import processarLote from "./Components/Principal/processarFilmes";
 
 const ContainerAll = styled.div`
   max-width: 1600px;
@@ -15,7 +16,9 @@ const ContainerAll = styled.div`
 `;
 const App = () => {
   const [savedMovies, setSavedMovies] = React.useState([]);
-
+  React.useEffect(() => {
+    processarLote();
+  }, []);
   React.useEffect(() => {
     const loadMovies = async () => {
       const moviesCollection = collection(firestore, "movies");
@@ -36,11 +39,33 @@ const App = () => {
     await removeMovie(movieId);
     setSavedMovies(savedMovies.filter((savedMovie) => savedMovie.id !== movieId));
   };
+  React.useEffect(() => {
+    const adicionarFilmesProcessados = async () => {
+      try {
+        const novosFilmes = await processarLote(); // Processa os filmes e retorna a lista de filmes
+        if (Array.isArray(novosFilmes)) {
+          for (const filme of novosFilmes) {
+            await handleMovieSave(filme); // Salva cada filme no Firestore
+          }
+        } else {
+          console.error("O resultado de processarLote não é um array.");
+        }
+      } catch (error) {
+        console.error("Erro ao processar e salvar filmes:", error);
+      }
+    };
+
+    adicionarFilmesProcessados();
+  }, []);
 
   return (
     <ContainerAll>
       <MovieSearch onMovieSave={handleMovieSave} />
-      <SavedMovies savedMovies={savedMovies} onRemove={handleMovieRemove} />
+      {savedMovies == "" ? (
+        <span style={{ color: "white", display: "flex", justifyContent: "center", alignItems: "center", marginTop: "20px" }}>Nenhum filme adicionado.</span>
+      ) : (
+        <SavedMovies savedMovies={savedMovies} onRemove={handleMovieRemove} />
+      )}
     </ContainerAll>
   );
 };
